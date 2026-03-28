@@ -1,0 +1,38 @@
+from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
+
+from app.config import settings
+
+_client: AsyncIOMotorClient | None = None
+
+
+def get_client() -> AsyncIOMotorClient:
+    global _client
+    if _client is None:
+        _client = AsyncIOMotorClient(settings.mongodb_uri)
+    return _client
+
+
+def get_database() -> AsyncIOMotorDatabase:
+    return get_client()[settings.database_name]
+
+
+async def connect_db() -> None:
+    client = get_client()
+    await client.admin.command("ping")
+    db = get_database()
+    # Unique email per role; Firebase-backed profiles also have firebase_uid
+    await db.students.create_index("email", unique=True)
+    await db.advisors.create_index("college_email", unique=True)
+    await db.students.create_index("firebase_uid", unique=True, sparse=True)
+    await db.advisors.create_index("firebase_uid", unique=True, sparse=True)
+    # Password reset OTPs (Resend) — auto-expire docs after `expires_at`.
+    await db.password_reset_otps.create_index("email")
+    await db.password_reset_otps.create_index("role")
+    await db.password_reset_otps.create_index("expires_at", expireAfterSeconds=0)
+
+
+async def close_db() -> None:
+    global _client
+    if _client is not None:
+        _client.close()
+        _client = None

@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CollegeConnectPresignedPut",
+      "Effect": "Allow",
+      "Action": ["s3:PutObject"],
+      "Resource": [
+        "arn:aws:s3:::REPLACE_WITH_BUCKET_NAME/college-ids/*",
+        "arn:aws:s3:::REPLACE_WITH_BUCKET_NAME/profile-pictures/*"
+      ]
+    },
+    {
+      "Sid": "OptionalApplyCorsFromScript",
+      "Effect": "Allow",
+      "Action": ["s3:PutBucketCORS", "s3:GetBucketCORS"],
+      "Resource": "arn:aws:s3:::REPLACE_WITH_BUCKET_NAME"
+    }
+  ]
+}
