@@ -33,22 +33,49 @@ def _service_account_json_path() -> tuple[Path | None, bool]:
 
 
 def init_firebase_admin() -> None:
-    """Load service account JSON from FIREBASE_SERVICE_ACCOUNT_PATH or GOOGLE_APPLICATION_CREDENTIALS."""
-    path, env_was_set = _service_account_json_path()
-    if path is None:
-        if not env_was_set:
-            _logger.warning(
-                "Set FIREBASE_SERVICE_ACCOUNT_PATH or GOOGLE_APPLICATION_CREDENTIALS in backend/.env "
-                "(path to Firebase service account JSON). POST /api/students and /api/advisors need it."
-            )
-        return
+    """Load service account JSON from FIREBASE_SERVICE_ACCOUNT_JSON,
+    FIREBASE_SERVICE_ACCOUNT_PATH or GOOGLE_APPLICATION_CREDENTIALS.
+    """
+    import json
+    from firebase_admin import credentials, initialize_app, get_app
+
     try:
         get_app()
+        return  # Already initialized
     except ValueError:
-        cred = credentials.Certificate(str(path))
-        initialize_app(cred)
-        _logger.info("Firebase Admin initialized")
-        print("Firebase Admin initialized with service account successfully!")
+        pass  # Need to initialize
+
+    # 1. Try JSON string from environment variable
+    raw_json = (settings.firebase_service_account_json or "").strip()
+    if raw_json:
+        try:
+            info = json.loads(raw_json)
+            cred = credentials.Certificate(info)
+            initialize_app(cred)
+            _logger.info("Firebase Admin initialized from JSON string")
+            print("Firebase Admin initialized from environment variable successfully!")
+            return
+        except Exception as e:
+            _logger.error("Failed to initialize Firebase from FIREBASE_SERVICE_ACCOUNT_JSON: %s", e)
+
+    # 2. Fall back to file path
+    path, env_was_set = _service_account_json_path()
+    if path:
+        try:
+            cred = credentials.Certificate(str(path))
+            initialize_app(cred)
+            _logger.info("Firebase Admin initialized from path: %s", path)
+            print(f"Firebase Admin initialized from path {path} successfully!")
+            return
+        except Exception as e:
+            _logger.error("Failed to initialize Firebase from path %s: %s", path, e)
+
+    # 3. If nothing worked, log warning
+    if not env_was_set and not raw_json:
+        _logger.warning(
+            "Set FIREBASE_SERVICE_ACCOUNT_JSON, FIREBASE_SERVICE_ACCOUNT_PATH or GOOGLE_APPLICATION_CREDENTIALS "
+            "in backend/.env. POST /api/students and /api/advisors need it."
+        )
 
 
 def verify_id_token(id_token: str) -> dict:

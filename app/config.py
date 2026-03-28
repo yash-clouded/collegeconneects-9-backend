@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     google_application_credentials: str = ""
     google_impersonate_user: str = ""
     firebase_service_account_path: str = "firebase-adminsdk.json"
+    firebase_service_account_json: str = ""
     # Session booking emails (Resend): https://resend.com/docs
     resend_api_key: str = ""
     # e.g. "CollegeConnect <bookings@yourdomain.com>" (must be a verified sender in Resend)

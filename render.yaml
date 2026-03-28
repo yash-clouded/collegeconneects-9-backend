@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: collegeconnect-backend
+    env: docker
+    region: singapore
+    plan: free
+    rootDir: backend
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: MONGODB_URI
+        sync: false
+      - key: DATABASE_NAME
+        value: collegeconnect
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        value: ap-south-1
+      - key: S3_BUCKET
+        value: collegeconnect-id-storage
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        value: "*" # Update this with your frontend URL later
