@@ -152,6 +152,56 @@ def send_password_reset_otp_email(
     _send_resend_email(payload=payload, api_key=api_key)
 
 
+def send_signup_otp_email(
+    *,
+    to_email: str,
+    otp_code: str,
+    role: str,
+) -> None:
+    api_key = (settings.resend_api_key or "").strip()
+    if not api_key:
+        raise ValueError(
+            "Resend is not configured. Set RESEND_API_KEY in backend/.env (see backend/.env.example).",
+        )
+
+    from_addr = (settings.resend_from or "").strip()
+    if not from_addr:
+        raise ValueError(
+            "Set RESEND_FROM in backend/.env to a sender on your Resend-verified domain, e.g. "
+            "RESEND_FROM=CollegeConnect <bookings@yourdomain.com> — see https://resend.com/domains",
+        )
+
+    safe_role = html.escape(role.strip() or "user")
+    safe_code = html.escape(otp_code)
+
+    text_body = (
+        "Your CollegeConnect sign-up verification code:\n\n"
+        f"{otp_code}\n\n"
+        "Enter this code on the sign-up page, then your password will be saved to your account.\n"
+        "This code expires in 10 minutes.\n"
+        "If you did not start sign-up, you can ignore this email."
+    )
+    html_body = (
+        "<p>Your <strong>CollegeConnect</strong> sign-up verification code:</p>"
+        f"<p style=\"font-size:24px; letter-spacing: 0.25em; font-weight:700; margin: 12px 0;\">{safe_code}</p>"
+        "<p>Enter this code on the sign-up page. After verification, your password is stored securely "
+        "with Firebase Authentication.</p>"
+        "<p>This code expires in <strong>10 minutes</strong>.</p>"
+        f"<p style=\"color:#666\">Account type: {safe_role}</p>"
+        "<p>If you did not start sign-up, you can ignore this email.</p>"
+    )
+
+    payload = {
+        "from": from_addr,
+        "to": [to_email.strip()],
+        "subject": "Your CollegeConnect sign-up code",
+        "text": text_body,
+        "html": html_body,
+    }
+
+    _send_resend_email(payload=payload, api_key=api_key)
+
+
 def send_advisor_session_update_email_to_student(
     *,
     student_email: str,

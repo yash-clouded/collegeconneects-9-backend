@@ -36,5 +36,8 @@ class Settings(BaseSettings):
     s3_college_ids_prefix: str = "college-ids"
     s3_profile_pictures_prefix: str = "profile-pictures"
 
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = ""
+
 
 settings = Settings()
