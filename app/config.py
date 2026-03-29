@@ -35,6 +35,9 @@ class Settings(BaseSettings):
     # Object key prefix, no leading/trailing slashes
     s3_college_ids_prefix: str = "college-ids"
     s3_profile_pictures_prefix: str = "profile-pictures"
+    # Razorpay: https://dashboard.razorpay.com/app/keys
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = ""
 
     razorpay_key_id: str = ""
     razorpay_key_secret: str = ""
