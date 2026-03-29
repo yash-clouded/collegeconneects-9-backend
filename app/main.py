@@ -46,7 +46,7 @@ app.include_router(upload.router, prefix="/api")
 app.include_router(payments.router, prefix="/api")
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 async def health() -> dict[str, str]:
     return {"status": "ok"}
 
@@ -73,7 +73,7 @@ async def db_stats(claims: dict = Depends(firebase_claims)) -> dict[str, str | i
     }
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 async def root() -> dict[str, str]:
     return {
         "message": "CollegeConnect API",
