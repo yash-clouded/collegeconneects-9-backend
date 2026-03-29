@@ -29,6 +29,10 @@ async def connect_db() -> None:
     await db.password_reset_otps.create_index("email")
     await db.password_reset_otps.create_index("role")
     await db.password_reset_otps.create_index("expires_at", expireAfterSeconds=0)
+    # Sign-up OTPs (Resend) — same TTL pattern as password reset
+    await db.signup_otps.create_index("email")
+    await db.signup_otps.create_index("role")
+    await db.signup_otps.create_index("expires_at", expireAfterSeconds=0)
 
 
 async def close_db() -> None:
