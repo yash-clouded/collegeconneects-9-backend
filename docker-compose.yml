@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: collegeconnect-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Use port 8000 for local docker development to match outer port
+      - PORT=8000
+    volumes:
+      # Mount current code to container for hot reloading
+      - .:/app
+      # Ensure firebase key is available locally via mount, 
+      # since it's ignored by .dockerignore during image build
+      - ./firebase-adminsdk.json:/app/firebase-adminsdk.json
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload

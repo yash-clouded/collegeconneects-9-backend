@@ -46,7 +46,7 @@ app.include_router(upload.router, prefix="/api")
 app.include_router(payments.router, prefix="/api")
 
 
-@app.api_route("/health", methods=["GET", "HEAD"])
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 async def health() -> dict[str, str]:
     return {"status": "ok"}
 
