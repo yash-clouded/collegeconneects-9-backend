@@ -39,6 +39,24 @@ def main() -> None:
         print("Invalid JSON: expected top-level { \"CORSRules\": [ ... ] }")
         sys.exit(1)
 
+    # Update AllowedOrigins from env so presigned PUTs from the browser don't get blocked by CORS.
+    # `cors_allowed_origins` is configured via CORS_ALLOWED_ORIGINS in backend/.env/render.yaml.
+    # - If it's "*" then we allow all origins.
+    # - Otherwise it should be a comma-separated list of origins.
+    allowed_origins_raw = (getattr(settings, "cors_allowed_origins", "") or "").strip()
+    allowed_origins: list[str] = []
+    if allowed_origins_raw:
+        if allowed_origins_raw == "*":
+            allowed_origins = ["*"]
+        else:
+            allowed_origins = [o.strip() for o in allowed_origins_raw.split(",") if o.strip()]
+
+    if allowed_origins:
+        for rule in rules:
+            # Keep the rest of the rule (methods/headers/expose) from the example file,
+            # but always align AllowedOrigins to the configured frontend origin(s).
+            rule["AllowedOrigins"] = allowed_origins
+
     client = boto3.client(
         "s3",
         aws_access_key_id=settings.aws_access_key_id,
