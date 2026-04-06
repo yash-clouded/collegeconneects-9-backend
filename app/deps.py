@@ -1,3 +1,4 @@
+from __future__ import annotations
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from firebase_admin import get_app

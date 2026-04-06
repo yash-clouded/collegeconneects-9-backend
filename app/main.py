@@ -1,3 +1,4 @@
+from __future__ import annotations
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Depends
@@ -27,16 +28,23 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="CollegeConnect API", lifespan=lifespan)
 
-# CORS hardening: Use explicit allowlist from settings (CORS_ALLOWED_ORIGINS)
+# CORS configuration: handle "allow_credentials" correctly with wildcard origin
 origins = [o.strip() for o in settings.cors_allowed_origins.split(",") if o.strip()]
+
+# If origins is just ["*"], we must set allow_credentials=False for FastAPI.
+# If we need credentials (cookies/auth), we should list specific domains.
+allow_credentials = True
+if "*" in origins:
+    allow_credentials = False
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=allow_credentials,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(students.router, prefix="/api")
 app.include_router(advisors.router, prefix="/api")

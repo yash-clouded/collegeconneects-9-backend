@@ -2,25 +2,15 @@ from pydantic import BaseModel
 from typing import Optional
 
 
-class RazorpayOrderCreate(BaseModel):
+class PaymentOrderCreate(BaseModel):
     amount: int  # in paise (e.g., 50000 for ₹500.00)
     currency: str = "INR"
     receipt: Optional[str] = None
 
 
-class RazorpayOrderResponse(BaseModel):
-    id: str
-    entity: str
+class PaymentOrderResponse(BaseModel):
+    order_id: str
     amount: int
-    amount_paid: int
-    amount_due: int
     currency: str
-    receipt: Optional[str] = None
     status: str
-    created_at: int
-
-
-class RazorpayPaymentVerify(BaseModel):
-    razorpay_order_id: str
-    razorpay_payment_id: str
-    razorpay_signature: str
+    redirect_url: str  # URL to redirect the user for payment
