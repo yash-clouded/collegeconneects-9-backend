@@ -65,3 +65,5 @@ class StudentResponse(BaseModel):
     email: EmailStr
     name: str
     created_at: datetime
+    total_spent: float = 0.0
+    total_sessions: int = 0

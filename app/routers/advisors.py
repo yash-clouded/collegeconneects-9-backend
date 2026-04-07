@@ -234,11 +234,13 @@ async def book_advisor(
 
     return {
         "ok": True,
+        "booking_id": str(result.inserted_id),
         "advisor_email": advisor_email,
         "selected_slot": selected_slot,
         "email_sent": True,
         "email_error": "",
     }
+
 
 
 @router.post("/sessions/notify-student")

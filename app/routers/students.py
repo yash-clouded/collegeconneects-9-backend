@@ -63,21 +63,6 @@ async def create_student(
         )
 
     if s3_configured():
-        if not payload.college_id_front_key or not payload.college_id_back_key:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="College ID front and back uploads are required (S3 object keys missing).",
-            )
-        if not college_id_keys_valid_for_uid(
-            uid,
-            "student",
-            payload.college_id_front_key,
-            payload.college_id_back_key,
-        ):
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="College ID upload keys do not match this account or session.",
-            )
         if payload.profile_picture:
             pp = str(payload.profile_picture).strip()
             if pp.startswith("data:"):
@@ -157,8 +142,8 @@ async def create_student(
     )
 
 
-@router.get("/me")
-async def get_my_student(claims: dict = Depends(firebase_claims)) -> dict:
+@router.get("/me", response_model=StudentResponse)
+async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResponse:
     uid = claims["uid"]
     db = get_database()
     doc = await db.students.find_one({"firebase_uid": uid})
@@ -175,9 +160,27 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> dict:
                 doc["firebase_uid"] = uid
     if not doc:
         raise HTTPException(status_code=404, detail="Student profile not found")
+
+    # Calculate stats dynamically
+    confirmed_bookings = await db.bookings.find({
+        "student_email": doc["email"],
+        "status": {"$in": ["confirmed", "finalized"]}
+    }).to_list(length=1000)
+
+    total_sessions = len(confirmed_bookings)
+    total_spent = 0.0
+    for b in confirmed_bookings:
+        try:
+            total_spent += float(b.get("session_price") or 0)
+        except (ValueError, TypeError):
+            continue
+
+    # Update doc with calculated stats
     doc["id"] = str(doc.pop("_id"))
-    doc.pop("password_hash", None)
-    return doc
+    doc["total_sessions"] = total_sessions
+    doc["total_spent"] = total_spent
+    
+    return StudentResponse(**doc)
 
 
 @router.patch("/me")

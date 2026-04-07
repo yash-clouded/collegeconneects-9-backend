@@ -35,12 +35,9 @@ class Settings(BaseSettings):
     # Object key prefix, no leading/trailing slashes
     s3_college_ids_prefix: str = "college-ids"
     s3_profile_pictures_prefix: str = "profile-pictures"
-    # PhonePe: https://dashboard.phonepe.com/
-    phonepe_merchant_id: str = ""
-    phonepe_salt_key: str = ""
-    phonepe_salt_index: str = "1"
-    # "UAT" for sandbox testing, "PROD" for live
-    phonepe_env: str = "UAT"
+    # Razorpay: https://dashboard.razorpay.com/
+    razorpay_key_id: str = ""
+    razorpay_key_secret: str = ""
     # Your live website URL (e.g., https://collegeconnects.co.in)
     base_url: str = "https://collegeconnects.co.in"
 

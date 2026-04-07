@@ -34,6 +34,11 @@ async def connect_db() -> None:
     await db.signup_otps.create_index("email")
     await db.signup_otps.create_index("role")
     await db.signup_otps.create_index("expires_at", expireAfterSeconds=0)
+    
+    # Bookings indexes for performance
+    await db.bookings.create_index("status")
+    await db.bookings.create_index("razorpay_order_id")
+    await db.bookings.create_index("created_at")
 
 
 async def close_db() -> None:
