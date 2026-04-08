@@ -26,6 +26,8 @@ class StudentCreate(BaseModel):
 
     college_id_back_key: Optional[str] = Field(default=None, alias="collegeIdBackKey")
 
+    id_upload_token: Optional[str] = Field(default=None, alias="idUploadToken")
+
     referral_code: Optional[str] = Field(default=None, alias="referralCode")
 
     @field_validator("referral_code", mode="before")
@@ -49,6 +51,7 @@ class StudentCreate(BaseModel):
         "profile_picture",
         "college_id_front_key",
         "college_id_back_key",
+        "id_upload_token",
         mode="before",
     )
     @classmethod

@@ -16,10 +16,12 @@ from app.mailer import (
 )
 from app.s3_service import (
     college_id_keys_valid_for_uid,
+    move_temp_college_id_to_user,
     profile_picture_key_valid_for_uid,
     s3_configured,
 )
 from app.schemas.advisor import AdvisorCreate, AdvisorResponse
+from app.temp_uploads import get_temp_upload_record, mark_temp_upload_claimed
 
 router = APIRouter(prefix="/advisors", tags=["advisors"])
 
@@ -322,22 +324,70 @@ async def create_advisor(
             detail="College email does not match your Firebase sign-in session.",
         )
 
+    db = get_database()
+    front_key = payload.college_id_front_key
+    back_key = payload.college_id_back_key
+
     if s3_configured():
-        if not payload.college_id_front_key or not payload.college_id_back_key:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="College ID front and back uploads are required (S3 object keys missing).",
-            )
-        if not college_id_keys_valid_for_uid(
+        has_direct_keys = bool(front_key and back_key)
+        if has_direct_keys and not college_id_keys_valid_for_uid(
             uid,
             "advisor",
-            payload.college_id_front_key,
-            payload.college_id_back_key,
+            front_key,
+            back_key,
         ):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="College ID upload keys do not match this account or session.",
             )
+
+        if (not has_direct_keys) and payload.id_upload_token:
+            temp = await get_temp_upload_record(
+                db,
+                role="advisor",
+                raw_token=str(payload.id_upload_token),
+            )
+            if not temp:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Temporary ID upload token is invalid or expired. Re-upload your ID card.",
+                )
+            try:
+                front_key = move_temp_college_id_to_user(
+                    uid,
+                    "advisor",
+                    "front",
+                    str(temp.get("front_key") or ""),
+                )
+                back_key = move_temp_college_id_to_user(
+                    uid,
+                    "advisor",
+                    "back",
+                    str(temp.get("back_key") or ""),
+                )
+            except (ValueError, RuntimeError) as e:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail=f"Could not finalize temporary ID uploads: {e!s}",
+                ) from e
+            claimed = await mark_temp_upload_claimed(
+                db,
+                role="advisor",
+                raw_token=str(payload.id_upload_token),
+                claimed_by_uid=uid,
+            )
+            if not claimed:
+                raise HTTPException(
+                    status_code=status.HTTP_409_CONFLICT,
+                    detail="Temporary ID upload token was already used. Please re-upload your ID card.",
+                )
+
+        if not front_key or not back_key:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="College ID front and back uploads are required (S3 object keys missing).",
+            )
+
         if payload.profile_picture:
             pp = str(payload.profile_picture).strip()
             if pp.startswith("data:"):
@@ -351,9 +401,11 @@ async def create_advisor(
                     detail="Profile picture key does not match this account or session.",
                 )
 
-    db = get_database()
     now = datetime.now(timezone.utc)
     doc = payload.model_dump(by_alias=False)
+    doc["college_id_front_key"] = str(front_key)
+    doc["college_id_back_key"] = str(back_key)
+    doc.pop("id_upload_token", None)
     doc.pop("referral_code", None)
     referrer_info = await resolve_signup_referral_or_raise(
         db,

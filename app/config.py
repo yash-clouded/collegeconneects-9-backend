@@ -34,7 +34,9 @@ class Settings(BaseSettings):
     s3_bucket: str = ""
     # Object key prefix, no leading/trailing slashes
     s3_college_ids_prefix: str = "college-ids"
+    s3_temp_college_ids_prefix: str = "college-ids-temp"
     s3_profile_pictures_prefix: str = "profile-pictures"
+    signup_temp_upload_ttl_minutes: int = 30
     # Razorpay: https://dashboard.razorpay.com/
     razorpay_key_id: str = ""
     razorpay_key_secret: str = ""

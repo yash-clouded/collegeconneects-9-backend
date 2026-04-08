@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import uuid
+import secrets
 from typing import Literal
 
 import boto3
@@ -120,6 +121,142 @@ def generate_profile_picture_presigned_put(
         raise RuntimeError(f"S3 presign failed: {e!s}") from e
 
     return url, key, bucket
+
+
+def generate_temp_college_id_presigned_put(
+    role: Literal["advisor", "student"],
+    side: Literal["front", "back"],
+    content_type: str,
+    upload_group_id: str | None = None,
+) -> tuple[str, str, str]:
+    """Returns (presigned_put_url, temp_object_key, bucket) for unauthenticated pre-signup uploads."""
+    if not s3_configured():
+        raise RuntimeError("S3 is not configured (missing AWS credentials or bucket).")
+
+    ct = (content_type or "image/jpeg").split(";")[0].strip().lower()
+    if ct not in _CONTENT_EXT:
+        raise ValueError(
+            f"Unsupported content type {content_type!r}. Use image/jpeg, image/png, or image/webp.",
+        )
+    ext = _CONTENT_EXT[ct]
+    prefix = (settings.s3_temp_college_ids_prefix or "college-ids-temp").strip().strip("/")
+    group = (upload_group_id or secrets.token_hex(8)).strip()
+    if not group:
+        group = secrets.token_hex(8)
+    key = f"{prefix}/{role}s/{group}/{side}_{uuid.uuid4().hex[:12]}.{ext}"
+    bucket = settings.s3_bucket
+
+    try:
+        cli = _client()
+        url = cli.generate_presigned_url(
+            ClientMethod="put_object",
+            Params={
+                "Bucket": bucket,
+                "Key": key,
+                "ContentType": ct,
+            },
+            ExpiresIn=300,
+            HttpMethod="PUT",
+        )
+    except (ClientError, BotoCoreError) as e:
+        raise RuntimeError(f"S3 presign failed: {e!s}") from e
+
+    return url, key, bucket
+
+
+def upload_temp_college_id_object(
+    role: Literal["advisor", "student"],
+    side: Literal["front", "back"],
+    content_type: str,
+    content: bytes,
+    upload_group_id: str | None = None,
+) -> tuple[str, str]:
+    """Direct backend upload to temporary S3 location. Returns (key, bucket)."""
+    if not s3_configured():
+        raise RuntimeError("S3 is not configured (missing AWS credentials or bucket).")
+
+    ct = (content_type or "image/jpeg").split(";")[0].strip().lower()
+    if ct not in _CONTENT_EXT:
+        raise ValueError(
+            f"Unsupported content type {content_type!r}. Use image/jpeg, image/png, or image/webp.",
+        )
+    ext = _CONTENT_EXT[ct]
+    prefix = (settings.s3_temp_college_ids_prefix or "college-ids-temp").strip().strip("/")
+    group = (upload_group_id or secrets.token_hex(8)).strip() or secrets.token_hex(8)
+    key = f"{prefix}/{role}s/{group}/{side}_{uuid.uuid4().hex[:12]}.{ext}"
+    bucket = settings.s3_bucket
+
+    try:
+        cli = _client()
+        cli.put_object(
+            Bucket=bucket,
+            Key=key,
+            Body=content,
+            ContentType=ct,
+        )
+    except (ClientError, BotoCoreError) as e:
+        raise RuntimeError(f"S3 direct upload failed: {e!s}") from e
+
+    return key, bucket
+
+
+def temp_college_id_keys_valid_for_role(
+    role: Literal["advisor", "student"],
+    front_key: str,
+    back_key: str,
+) -> bool:
+    prefix = (settings.s3_temp_college_ids_prefix or "college-ids-temp").strip().strip("/")
+    base = f"{prefix}/{role}s/"
+    fk = str(front_key or "").strip()
+    bk = str(back_key or "").strip()
+    if not fk.startswith(base) or not bk.startswith(base):
+        return False
+    fn_f = fk.split("/")[-1] if fk else ""
+    fn_b = bk.split("/")[-1] if bk else ""
+    return fn_f.startswith("front_") and fn_b.startswith("back_")
+
+
+def move_temp_college_id_to_user(
+    firebase_uid: str,
+    role: Literal["advisor", "student"],
+    side: Literal["front", "back"],
+    temp_key: str,
+) -> str:
+    """Copy temp upload object to permanent user path and delete temp object; returns final key."""
+    _validate_uid(firebase_uid)
+    if not s3_configured():
+        raise RuntimeError("S3 is not configured (missing AWS credentials or bucket).")
+
+    temp_prefix = (settings.s3_temp_college_ids_prefix or "college-ids-temp").strip().strip("/")
+    source_key = str(temp_key or "").strip()
+    expected_base = f"{temp_prefix}/{role}s/"
+    if not source_key.startswith(expected_base):
+        raise ValueError("Temporary college ID key is invalid for this role.")
+
+    filename = source_key.split("/")[-1]
+    if side == "front" and not filename.startswith("front_"):
+        raise ValueError("Temporary front key is invalid.")
+    if side == "back" and not filename.startswith("back_"):
+        raise ValueError("Temporary back key is invalid.")
+    ext = filename.rsplit(".", 1)[-1] if "." in filename else "jpg"
+
+    final_prefix = (settings.s3_college_ids_prefix or "college-ids").strip().strip("/")
+    final_key = f"{final_prefix}/{role}s/{firebase_uid}/{side}_{uuid.uuid4().hex[:12]}.{ext}"
+    bucket = settings.s3_bucket
+
+    try:
+        cli = _client()
+        cli.copy_object(
+            Bucket=bucket,
+            CopySource={"Bucket": bucket, "Key": source_key},
+            Key=final_key,
+            MetadataDirective="COPY",
+        )
+        cli.delete_object(Bucket=bucket, Key=source_key)
+    except (ClientError, BotoCoreError) as e:
+        raise RuntimeError(f"S3 move failed: {e!s}") from e
+
+    return final_key
 
 
 def profile_picture_key_valid_for_uid(
