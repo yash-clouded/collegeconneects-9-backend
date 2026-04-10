@@ -26,9 +26,9 @@ class AdvisorCreate(BaseModel):
 
     branch: str
 
-    phone: str = Field(min_length=1)
+    phone: Optional[str] = Field(default=None, min_length=1)
 
-    upi_id: str = Field(alias="upiId")
+
 
     personal_email: Optional[EmailStr] = Field(default=None, alias="personalEmail")
 
@@ -40,11 +40,11 @@ class AdvisorCreate(BaseModel):
 
     jee_advanced_rank: Optional[str] = Field(default=None, alias="jeeAdvancedRank")
 
-    bio: str
+    bio: Optional[str] = None
 
-    skills: Optional[str] = None
 
-    achievements: Optional[str] = None
+
+
 
     languages: list[str] = Field(default_factory=list)
 
@@ -117,8 +117,6 @@ class AdvisorCreate(BaseModel):
     @field_validator(
         "jee_advanced_rank",
         "language_other",
-        "achievements",
-        "skills",
         "profile_picture",
         "college_id_front_key",
         "college_id_back_key",

@@ -84,8 +84,6 @@ class AdvisorProfileUpdate(BaseModel):
     jee_mains_rank: str | None = None
     jee_advanced_rank: str | None = None
     bio: str | None = None
-    skills: str | None = None
-    achievements: str | None = None
     languages: list[str] | None = None
     language_other: str | None = None
     preferred_timezones: list[str] | None = None
@@ -118,10 +116,6 @@ async def list_advisors() -> list[dict]:
             {
                 "name": 1,
                 "detected_college": 1,
-                "branch": 1,
-                "session_price": 1,
-                "skills": 1,
-                "bio": 1,
                 "languages": 1,
                 "preferred_timezones": 1,
                 "preferredTimezones": 1,
@@ -146,7 +140,6 @@ async def list_advisors() -> list[dict]:
                 "college": d.get("detected_college") or "",
                 "branch": d.get("branch") or "",
                 "session_price": str(d.get("session_price", "") or ""),
-                "skills": d.get("skills") or "",
                 "bio": d.get("bio") or "",
                 "languages": langs,
                 "preferred_timezones": [str(x) for x in slots if x is not None],

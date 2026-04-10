@@ -9,10 +9,9 @@ class StudentCreate(BaseModel):
 
     name: str = Field(min_length=1)
     email: EmailStr
-    phone: str = Field(min_length=1)
+    phone: Optional[str] = Field(default=None, min_length=1)
     gender: str
     state: str
-    upi_id: str = Field(alias="upiId")
     academic_status: str = Field(alias="academicStatus")
     jee_mains_percentile: str = Field(alias="jeeMainsPercentile")
     jee_mains_rank: str = Field(alias="jeeMainsRank")
@@ -22,11 +21,11 @@ class StudentCreate(BaseModel):
     # Optional avatar: S3 object key from presigned upload (not a data URL when S3 is configured).
     profile_picture: Optional[str] = Field(default=None, alias="profilePicture")
 
-    college_id_front_key: Optional[str] = Field(default=None, alias="collegeIdFrontKey")
 
-    college_id_back_key: Optional[str] = Field(default=None, alias="collegeIdBackKey")
 
-    id_upload_token: Optional[str] = Field(default=None, alias="idUploadToken")
+
+
+
 
     referral_code: Optional[str] = Field(default=None, alias="referralCode")
 
@@ -49,9 +48,6 @@ class StudentCreate(BaseModel):
         "jee_advanced_rank",
         "language_other",
         "profile_picture",
-        "college_id_front_key",
-        "college_id_back_key",
-        "id_upload_token",
         mode="before",
     )
     @classmethod
