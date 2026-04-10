@@ -115,6 +115,9 @@ async def list_advisors() -> list[dict]:
             {},
             {
                 "name": 1,
+                "branch": 1,
+                "bio": 1,
+                "session_price": 1,
                 "detected_college": 1,
                 "languages": 1,
                 "preferred_timezones": 1,
