@@ -30,6 +30,7 @@ class StudentProfileUpdate(BaseModel):
     academic_status: str | None = None
     jee_mains_percentile: str | None = None
     jee_mains_rank: str | None = None
+    jee_advanced_rank: str | None = None
     languages: list[str] | None = None
 
 
@@ -191,6 +192,13 @@ async def update_my_student(
         raise HTTPException(status_code=404, detail="Student profile not found")
 
     updates = payload.model_dump(exclude_unset=True)
+    if "jee_mains_percentile" in updates:
+        updates["jeeMainsPercentile"] = updates["jee_mains_percentile"]
+    if "jee_mains_rank" in updates:
+        updates["jeeMainsRank"] = updates["jee_mains_rank"]
+    if "jee_advanced_rank" in updates:
+        updates["jeeAdvancedRank"] = updates["jee_advanced_rank"]
+        
     if not updates:
         doc["id"] = str(doc.pop("_id"))
         doc.pop("password_hash", None)

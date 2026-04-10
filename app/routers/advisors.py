@@ -1,4 +1,5 @@
 from datetime import datetime, timezone, timedelta
+import secrets
 from typing import Literal
 
 from bson import ObjectId
@@ -228,7 +229,7 @@ async def book_advisor(
         "created_at": now,
         "updated_at": now
     }
-    await db.bookings.insert_one(booking_doc)
+    result = await db.bookings.insert_one(booking_doc)
 
     return {
         "ok": True,
