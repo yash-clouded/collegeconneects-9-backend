@@ -113,7 +113,12 @@ async def list_advisors() -> list[dict]:
     docs = (
         await get_database()
         .advisors.find(
-            {"is_self_healed": {"$ne": True}},
+            {
+                "is_self_healed": {"$ne": True},
+                "name": {"$ne": "New User"},
+                "detected_college": {"$ne": "", "$exists": True},
+                "branch": {"$ne": "Awaiting Profile Setup", "$exists": True}
+            },
             {
                 "name": 1,
                 "branch": 1,
