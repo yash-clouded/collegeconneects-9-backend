@@ -150,11 +150,6 @@ class AdvisorCreate(BaseModel):
             raise ValueError("preferredTimezones must be a list of time ranges")
 
         cleaned = [str(item).strip() for item in v if str(item).strip()]
-
-        if len(cleaned) < 4:
-
-            raise ValueError("Add at least 4 preferred time slots")
-
         return cleaned
 
 
