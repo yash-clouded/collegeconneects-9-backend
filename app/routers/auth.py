@@ -181,13 +181,20 @@ async def _firebase_user_exists(email: str) -> bool:
         return False
 
 
-async def _mongo_profile_exists(role: str, email: str) -> bool:
+async def _mongo_profile_exists(role: str, email: str, allow_recovered: bool = False) -> bool:
     db = get_database()
-    if role == "student":
-        n = await db.students.count_documents({"email": email.lower()}, limit=1)
-    else:
-        n = await db.advisors.count_documents({"college_email": email.lower()}, limit=1)
-    return n > 0
+    query = {"email": email.lower()} if role == "student" else {"college_email": email.lower()}
+    doc = await (db.students if role == "student" else db.advisors).find_one(query)
+    
+    if not doc:
+        return False
+        
+    if allow_recovered:
+        # If it's a sync-recovered or self-healed profile, we don't count it as a "conflict" blocking signup
+        if doc.get("is_sync_recovered") or doc.get("is_self_healed"):
+            return False
+            
+    return True
 
 
 @router.post("/signup-otp/request")
@@ -197,7 +204,7 @@ async def request_signup_otp(payload: SignupOtpRequest) -> dict:
 
     # We only block if BOTH firebase and mongo profile exist. 
     # If firebase exists but mongo doesn't, we allow OTP request to "self-heal" the missing profile.
-    if await _firebase_user_exists(email) and await _mongo_profile_exists(role, email):
+    if await _firebase_user_exists(email) and await _mongo_profile_exists(role, email, allow_recovered=False):
         raise HTTPException(
             status_code=409,
             detail="An account with this email already exists. Sign in instead.",
@@ -258,7 +265,8 @@ async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
 
-    if await _mongo_profile_exists(role, email):
+    if await _mongo_profile_exists(role, email, allow_recovered=True):
+        # We only block if it's a REAL (non-skeleton) profile.
         raise HTTPException(
             status_code=409,
             detail="This email is already registered. Sign in instead.",
@@ -308,8 +316,14 @@ async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
             email_verified=True,
         )
     except fb_auth.EmailAlreadyExistsError:
-        # User already in Firebase? That's fine if they are missing a MongoDB profile.
-        # We delete the OTP so they can proceed.
+        # User already in Firebase? That's fine if they are missing a MongoDB profile
+        # OR if they have a skeleton profile being 'claimed'.
+        # Since they verified OTP, we can safely update their password in case it was unknown/different.
+        await asyncio.to_thread(
+            fb_auth.update_user,
+            email=email,
+            password=payload.password
+        )
         await db.signup_otps.delete_many({"email": email, "role": role})
         return {"ok": True}
     except Exception as e:
