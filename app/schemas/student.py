@@ -10,11 +10,11 @@ class StudentCreate(BaseModel):
     name: str = Field(min_length=1)
     email: EmailStr
     phone: Optional[str] = Field(default=None, min_length=1)
-    gender: str
-    state: str
-    academic_status: str = Field(alias="academicStatus")
-    jee_mains_percentile: str = Field(alias="jeeMainsPercentile")
-    jee_mains_rank: str = Field(alias="jeeMainsRank")
+    gender: Optional[str] = ""
+    state: Optional[str] = ""
+    academic_status: Optional[str] = Field(default="", alias="academicStatus")
+    jee_mains_percentile: Optional[str] = Field(default="", alias="jeeMainsPercentile")
+    jee_mains_rank: Optional[str] = Field(default="", alias="jeeMainsRank")
     jee_advanced_rank: Optional[str] = Field(default=None, alias="jeeAdvancedRank")
     languages: list[str] = Field(default_factory=list)
     language_other: Optional[str] = Field(default=None, alias="languageOther")

@@ -18,13 +18,13 @@ class AdvisorCreate(BaseModel):
 
     name: str = Field(min_length=1)
 
-    gender: str
+    gender: Optional[str] = ""
 
     college_email: EmailStr = Field(alias="collegeEmail")
 
-    detected_college: str = Field(alias="detectedCollege")
+    detected_college: Optional[str] = Field(default="", alias="detectedCollege")
 
-    branch: str
+    branch: Optional[str] = ""
 
     phone: Optional[str] = Field(default=None, min_length=1)
 
@@ -32,11 +32,11 @@ class AdvisorCreate(BaseModel):
 
     personal_email: Optional[EmailStr] = Field(default=None, alias="personalEmail")
 
-    state: str
+    state: Optional[str] = ""
 
-    jee_mains_percentile: str = Field(alias="jeeMainsPercentile")
+    jee_mains_percentile: Optional[str] = Field(default="", alias="jeeMainsPercentile")
 
-    jee_mains_rank: str = Field(alias="jeeMainsRank")
+    jee_mains_rank: Optional[str] = Field(default="", alias="jeeMainsRank")
 
     jee_advanced_rank: Optional[str] = Field(default=None, alias="jeeAdvancedRank")
 
@@ -54,7 +54,7 @@ class AdvisorCreate(BaseModel):
 
     preferred_timezones: list[str] = Field(default_factory=list, alias="preferredTimezones")
 
-    session_price: str = Field(alias="sessionPrice")
+    session_price: Optional[str] = Field(default="0", alias="sessionPrice")
 
     # Acknowledgment checkbox; college ID + optional profile photo live in S3 — we store object keys only.
 

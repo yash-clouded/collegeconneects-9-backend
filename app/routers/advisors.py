@@ -379,11 +379,12 @@ async def create_advisor(
                     detail="Temporary ID upload token was already used. Please re-upload your ID card.",
                 )
 
-        if not front_key or not back_key:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail="College ID front and back uploads are required (S3 object keys missing).",
-            )
+        # We allow minimal signup without ID keys. They will be required before the advisor can be 'verified'.
+        # if not front_key or not back_key:
+        #     raise HTTPException(
+        #         status_code=status.HTTP_400_BAD_REQUEST,
+        #         detail="College ID front and back uploads are required (S3 object keys missing).",
+        #     )
 
         if payload.profile_picture:
             pp = str(payload.profile_picture).strip()
