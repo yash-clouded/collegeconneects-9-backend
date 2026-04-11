@@ -113,7 +113,7 @@ async def list_advisors() -> list[dict]:
     docs = (
         await get_database()
         .advisors.find(
-            {},
+            {"is_self_healed": {"$ne": True}},
             {
                 "name": 1,
                 "branch": 1,
@@ -565,6 +565,8 @@ async def update_my_advisor(
         return doc
 
     updates["updated_at"] = datetime.now(timezone.utc)
+    if doc.get("is_self_healed"):
+        updates["is_self_healed"] = False
     await db.advisors.update_one({"_id": doc["_id"]}, {"$set": updates})
     fresh = await db.advisors.find_one({"_id": doc["_id"]})
     if not fresh:
