@@ -135,6 +135,14 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
     db = get_database()
     doc = await db.students.find_one({"firebase_uid": uid})
     if not doc:
+        # Check if they are already an advisor
+        advisor_doc = await db.advisors.find_one({"firebase_uid": uid})
+        if advisor_doc:
+            raise HTTPException(
+                status_code=403, 
+                detail="This account is registered as an Advisor. Please use the Advisor Portal."
+            )
+
         # SELF-HEALING: Create skeleton if missing
         email = (claims.get("email") or "").lower()
         if not email:
