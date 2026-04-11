@@ -135,18 +135,30 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
     db = get_database()
     doc = await db.students.find_one({"firebase_uid": uid})
     if not doc:
-        claim_email = (claims.get("email") or "").lower()
-        if claim_email:
-            doc = await db.students.find_one({"email": claim_email})
-            if doc:
-                # Backfill UID for older rows created before firebase_uid mapping.
-                await db.students.update_one(
-                    {"_id": doc["_id"]},
-                    {"$set": {"firebase_uid": uid}},
-                )
-                doc["firebase_uid"] = uid
-    if not doc:
-        raise HTTPException(status_code=404, detail="Student profile not found")
+        # SELF-HEALING: Create skeleton if missing
+        email = (claims.get("email") or "").lower()
+        if not email:
+            raise HTTPException(status_code=404, detail="Student profile not found")
+        
+        now = datetime.now(timezone.utc)
+        new_doc = {
+            "firebase_uid": uid,
+            "email": email,
+            "name": claims.get("name") or email.split("@")[0],
+            "phone": "",
+            "state": "",
+            "academic_status": "Awaiting Profile Setup",
+            "jee_mains_percentile": "",
+            "jee_mains_rank": "",
+            "jee_advanced_rank": "",
+            "created_at": now,
+            "updated_at": now,
+            "total_sessions": 0,
+            "is_self_healed": True
+        }
+        res = await db.students.insert_one(new_doc)
+        new_doc["_id"] = res.inserted_id
+        doc = new_doc
 
     # Calculate stats dynamically
     confirmed_bookings = await db.bookings.find({

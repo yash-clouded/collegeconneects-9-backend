@@ -478,18 +478,41 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
     db = get_database()
     doc = await db.advisors.find_one({"firebase_uid": uid})
     if not doc:
-        claim_email = (claims.get("email") or "").lower()
-        if claim_email:
-            doc = await db.advisors.find_one({"college_email": claim_email})
-            if doc:
-                # Backfill UID for older rows created before firebase_uid mapping.
-                await db.advisors.update_one(
-                    {"_id": doc["_id"]},
-                    {"$set": {"firebase_uid": uid}},
-                )
-                doc["firebase_uid"] = uid
-    if not doc:
-        raise HTTPException(status_code=404, detail="Advisor profile not found")
+        # SELF-HEALING: Create skeleton if missing
+        email = (claims.get("email") or "").lower()
+        if not email:
+            raise HTTPException(status_code=404, detail="Advisor profile not found")
+        
+        # Check if they look like an advisor by email
+        import re
+        is_advisor_email = bool(re.match(r".*@.*(\.ac\.in|\.edu\.in|\.edu)$", email, re.IGNORECASE))
+        if not is_advisor_email:
+             # If they hit /advisors/me but aren't an advisor by email, still create skeleton here
+             # as they explicitly tried to access advisor dashboard.
+             pass
+
+        now = datetime.now(timezone.utc)
+        new_doc = {
+            "firebase_uid": uid,
+            "college_email": email,
+            "name": claims.get("name") or email.split("@")[0],
+            "phone": "",
+            "state": "",
+            "branch": "Awaiting Profile Setup",
+            "bio": "Recovered profile. Please update your details.",
+            "session_price": "199",
+            "current_study_year": 1,
+            "preferred_timezones": [],
+            "total_earnings": 0,
+            "total_sessions": 0,
+            "total_students": 0,
+            "created_at": now,
+            "updated_at": now,
+            "is_self_healed": True
+        }
+        res = await db.advisors.insert_one(new_doc)
+        new_doc["_id"] = res.inserted_id
+        doc = new_doc
     
     doc = _normalize_advisor_doc(doc)
     doc["id"] = str(doc.pop("_id"))

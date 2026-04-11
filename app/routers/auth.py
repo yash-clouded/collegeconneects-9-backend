@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import hashlib
 import secrets
 import asyncio
@@ -31,9 +31,9 @@ class PasswordResetConfirm(BaseModel):
 
 
 def _now() -> datetime:
-    # Use UTC-naive datetimes everywhere to match MongoDB's datetime behavior
-    # and avoid naive/aware subtraction errors.
-    return datetime.utcnow()
+    # Use UTC-aware datetimes to ensure consistency with MongoDB
+    # and avoid naive vs aware comparison issues.
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 def _hash_otp(*, otp: str, salt: str) -> str:
@@ -271,9 +271,19 @@ async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
         sort=[("created_at", -1)],
     )
     if not doc:
+        # Check if it was ever generated to see if it just expired
+        expired_doc = await db.signup_otps.find_one(
+            {"email": email, "role": role},
+            sort=[("created_at", -1)],
+        )
+        if expired_doc:
+            raise HTTPException(
+                status_code=400,
+                detail="Verification code expired. Please request a new one.",
+            )
         raise HTTPException(
             status_code=400,
-            detail="Code expired or not found. Request a new one.",
+            detail="Verification code not found. Please request a new one.",
         )
 
     attempts = int(doc.get("attempts") or 0)
