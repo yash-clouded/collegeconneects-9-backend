@@ -32,6 +32,7 @@ class StudentProfileUpdate(BaseModel):
     jee_mains_rank: str | None = None
     jee_advanced_rank: str | None = None
     languages: list[str] | None = None
+    language_other: str | None = None
 
 
 class StudentFinalSlotNotify(BaseModel):
@@ -225,6 +226,8 @@ async def update_my_student(
         return doc
 
     updates["updated_at"] = datetime.now(timezone.utc)
+    if doc.get("is_self_healed"):
+        updates["is_self_healed"] = False
     await db.students.update_one({"_id": doc["_id"]}, {"$set": updates})
     fresh = await db.students.find_one({"_id": doc["_id"]})
     if not fresh:

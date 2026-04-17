@@ -58,7 +58,7 @@ class StudentCreate(BaseModel):
 
 
 class StudentResponse(BaseModel):
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(populate_by_name=True, extra="ignore")
 
     id: str
     email: EmailStr
@@ -66,3 +66,12 @@ class StudentResponse(BaseModel):
     created_at: datetime
     total_spent: float = 0.0
     total_sessions: int = 0
+    # Profile fields — returned for profile page display
+    phone: Optional[str] = None
+    state: Optional[str] = None
+    academic_status: Optional[str] = None
+    jee_mains_percentile: Optional[str] = None
+    jee_mains_rank: Optional[str] = None
+    jee_advanced_rank: Optional[str] = None
+    languages: list[str] = Field(default_factory=list)
+    language_other: Optional[str] = None

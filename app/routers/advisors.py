@@ -128,6 +128,10 @@ async def list_advisors() -> list[dict]:
                 "languages": 1,
                 "preferred_timezones": 1,
                 "preferredTimezones": 1,
+                "current_study_year": 1,
+                "study_year_at_signup": 1,
+                "study_year_anchor_date": 1,
+                "created_at": 1,
             },
         )
         .sort("updated_at", -1)
@@ -152,6 +156,10 @@ async def list_advisors() -> list[dict]:
                 "bio": d.get("bio") or "",
                 "languages": langs,
                 "preferred_timezones": [str(x) for x in slots if x is not None],
+                "current_study_year": d.get("current_study_year"),
+                "study_year_at_signup": d.get("study_year_at_signup"),
+                "study_year_anchor_date": str(d["study_year_anchor_date"]) if d.get("study_year_anchor_date") else None,
+                "created_at": str(d["created_at"]) if d.get("created_at") else None,
             }
         )
     return out
