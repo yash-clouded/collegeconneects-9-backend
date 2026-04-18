@@ -81,14 +81,21 @@ class AdvisorProfileUpdate(BaseModel):
     phone: str | None = None
     personal_email: str | None = None
     state: str | None = None
+    date_of_birth: str | None = None
+    gender: str | None = None
     jee_mains_percentile: str | None = None
     jee_mains_rank: str | None = None
     jee_advanced_rank: str | None = None
     bio: str | None = None
+    skills: str | None = None
+    achievements: str | None = None
     languages: list[str] | None = None
     language_other: str | None = None
     preferred_timezones: list[str] | None = None
     session_price: str | None = None
+    college_id_front_key: str | None = None
+    college_id_back_key: str | None = None
+    profile_picture: str | None = None
 
 
 class AdvisorBookingCreate(BaseModel):
@@ -116,15 +123,29 @@ async def list_advisors() -> list[dict]:
             {
                 "is_self_healed": {"$ne": True},
                 "name": {"$ne": "New User"},
-                "detected_college": {"$ne": "", "$exists": True},
-                "branch": {"$ne": "Awaiting Profile Setup", "$exists": True}
+                # Use $and to combine $or conditions properly
+                "$and": [
+                    {
+                        "$or": [
+                            {"detected_college": {"$ne": "", "$exists": True}},
+                            {"detectedCollege": {"$ne": "", "$exists": True}},
+                        ]
+                    },
+                    {
+                        "$or": [
+                            {"branch": {"$exists": True, "$ne": "", "$nin": ["Awaiting Profile Setup"]}},
+                        ]
+                    },
+                ],
             },
             {
                 "name": 1,
                 "branch": 1,
                 "bio": 1,
                 "session_price": 1,
+                "sessionPrice": 1,
                 "detected_college": 1,
+                "detectedCollege": 1,
                 "languages": 1,
                 "preferred_timezones": 1,
                 "preferredTimezones": 1,
@@ -132,10 +153,17 @@ async def list_advisors() -> list[dict]:
                 "study_year_at_signup": 1,
                 "study_year_anchor_date": 1,
                 "created_at": 1,
+                # Verification fields needed for 50% gate
+                "jee_mains_rank": 1,
+                "jeeMainsRank": 1,
+                "college_id_front_key": 1,
+                "skills": 1,
+                "achievements": 1,
+                "profile_picture": 1,
             },
         )
         .sort("updated_at", -1)
-        .to_list(length=200)
+        .to_list(length=1000)
     )
     out: list[dict] = []
     for d in docs:
@@ -146,11 +174,16 @@ async def list_advisors() -> list[dict]:
         slots = d.get("preferred_timezones") or d.get("preferredTimezones")
         if not isinstance(slots, list):
             slots = []
+        college = d.get("detected_college") or d.get("detectedCollege") or ""
+        # Skip advisors with no college info at all
+        if not college:
+            continue
         out.append(
             {
                 "id": str(d.get("_id")),
                 "name": d.get("name") or "",
-                "college": d.get("detected_college") or "",
+                "college": college,
+                "detected_college": college,
                 "branch": d.get("branch") or "",
                 "session_price": str(d.get("session_price", "") or ""),
                 "bio": d.get("bio") or "",
@@ -160,9 +193,16 @@ async def list_advisors() -> list[dict]:
                 "study_year_at_signup": d.get("study_year_at_signup"),
                 "study_year_anchor_date": str(d["study_year_anchor_date"]) if d.get("study_year_anchor_date") else None,
                 "created_at": str(d["created_at"]) if d.get("created_at") else None,
+                # Verification fields for frontend 50% gate
+                "jee_mains_rank": d.get("jee_mains_rank") or "",
+                "college_id_front_key": d.get("college_id_front_key") or "",
+                "skills": d.get("skills") or "",
+                "achievements": d.get("achievements") or "",
+                "profile_picture": d.get("profile_picture") or "",
             }
         )
     return out
+
 
 
 @router.post("/book")
