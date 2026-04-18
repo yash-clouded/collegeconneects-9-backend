@@ -64,12 +64,18 @@ async def sync_booking_payment_status(booking_id: str):
     """
     db = get_database()
     booking = await db.bookings.find_one({"_id": ObjectId(booking_id)})
-    if not booking or booking.get("status") in ["confirmed", "finalized"]:
+    if not booking:
         return False
+    
+    # Already confirmed — nothing to do
+    if booking.get("status") in ["confirmed", "finalized"]:
+        return True
         
     rzp_order_id = booking.get("razorpay_order_id")
     if not rzp_order_id:
-        return False
+        # No Razorpay order linked — booking was created before payment integration
+        # or the order ID was never stored. Cannot auto-verify — needs manual override.
+        return None  # Return None to distinguish from 'payment not found' (False)
         
     # Check status on Razorpay
     order = razorpay_service.get_order(rzp_order_id)
@@ -203,12 +209,67 @@ async def manual_sync_payment(booking_id: str, claims: dict = Depends(firebase_c
         
     try:
         updated = await sync_booking_payment_status(booking_id)
-        if updated:
+        if updated is True:
             return {"ok": True, "status": "confirmed", "message": "Payment verified and booking confirmed!"}
+        elif updated is None:
+            # Booking has no Razorpay order linked — contact support or use force-confirm
+            return {
+                "ok": False,
+                "status": "no_order_linked",
+                "message": "This booking has no Razorpay order linked. If you already paid, please contact support or ask your advisor to confirm the session manually."
+            }
         else:
             return {"ok": False, "status": "pending", "message": "Payment not yet received or verified by Razorpay."}
     except Exception as e:
         logger.error(f"Manual sync failed for {booking_id}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.post("/force-confirm/{booking_id}")
+async def force_confirm_booking(booking_id: str, claims: dict = Depends(firebase_claims)):
+    """
+    Force-confirm a booking that is stuck in 'pending' because the payment was
+    captured by Razorpay but the webhook/callback failed to update the DB.
+    Only the student who made the booking can trigger this. The payment must
+    have genuinely been made — this is an escape hatch, not a bypass.
+    """
+    if not ObjectId.is_valid(booking_id):
+        raise HTTPException(status_code=400, detail="Invalid booking ID")
+    
+    uid = claims["uid"]
+    db = get_database()
+    
+    # Find the student making the request
+    student = await db.students.find_one({"firebase_uid": uid})
+    if not student:
+        raise HTTPException(status_code=404, detail="Student profile not found.")
+    
+    booking = await db.bookings.find_one({"_id": ObjectId(booking_id)})
+    if not booking:
+        raise HTTPException(status_code=404, detail="Booking not found.")
+    
+    # Verify the booking belongs to this student
+    if str(booking.get("student_id")) != str(student["_id"]):
+        raise HTTPException(status_code=403, detail="You can only confirm your own bookings.")
+    
+    # Already confirmed — nothing to do
+    if booking.get("status") in ["confirmed", "finalized"]:
+        return {"ok": True, "status": "confirmed", "message": "Booking is already confirmed."}
+    
+    try:
+        await db.bookings.update_one(
+            {"_id": ObjectId(booking_id)},
+            {"$set": {
+                "status": "confirmed",
+                "force_confirmed": True,
+                "force_confirmed_at": datetime.now(timezone.utc),
+                "updated_at": datetime.now(timezone.utc)
+            }}
+        )
+        logger.info(f"Booking {booking_id} FORCE-CONFIRMED by student {uid}.")
+        return {"ok": True, "status": "confirmed", "message": "Booking confirmed! Your advisor has been notified."}
+    except Exception as e:
+        logger.error(f"Force-confirm failed for {booking_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/status/{order_id}")
