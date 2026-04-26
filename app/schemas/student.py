@@ -19,6 +19,7 @@ class StudentCreate(BaseModel):
     languages: list[str] = Field(default_factory=list)
     language_other: Optional[str] = Field(default=None, alias="languageOther")
     # Optional avatar: S3 object key from presigned upload (not a data URL when S3 is configured).
+    role: str = "student"
     profile_picture: Optional[str] = Field(default=None, alias="profilePicture")
 
 
@@ -75,3 +76,4 @@ class StudentResponse(BaseModel):
     jee_advanced_rank: Optional[str] = None
     languages: list[str] = Field(default_factory=list)
     language_other: Optional[str] = None
+    role: str = "student"

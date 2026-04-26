@@ -181,10 +181,19 @@ async def _firebase_user_exists(email: str) -> bool:
         return False
 
 
-async def _mongo_profile_exists(role: str, email: str, allow_recovered: bool = False) -> bool:
+async def _mongo_profile_exists(role: str | None, email: str, allow_recovered: bool = False) -> bool:
     db = get_database()
-    query = {"email": email.lower()} if role == "student" else {"college_email": email.lower()}
-    doc = await (db.students if role == "student" else db.advisors).find_one(query)
+    email = email.lower()
+    
+    if role == "student":
+        doc = await db.students.find_one({"email": email})
+    elif role == "advisor":
+        doc = await db.advisors.find_one({"college_email": email})
+    else:
+        # Check both
+        student_doc = await db.students.find_one({"email": email})
+        advisor_doc = await db.advisors.find_one({"college_email": email})
+        doc = student_doc or advisor_doc
     
     if not doc:
         return False
@@ -202,12 +211,12 @@ async def request_signup_otp(payload: SignupOtpRequest) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
 
-    # We only block if BOTH firebase and mongo profile exist. 
-    # If firebase exists but mongo doesn't, we allow OTP request to "self-heal" the missing profile.
-    if await _firebase_user_exists(email) and await _mongo_profile_exists(role, email, allow_recovered=False):
+    # We block if the user already exists in EITHER collection in MongoDB, 
+    # regardless of which role they are trying to sign up for now.
+    if await _mongo_profile_exists(None, email, allow_recovered=False):
         raise HTTPException(
             status_code=409,
-            detail="An account with this email already exists. Sign in instead.",
+            detail="An account with this email already exists on our platform. Please sign in.",
         )
     # (Handled by the combined check above)
 

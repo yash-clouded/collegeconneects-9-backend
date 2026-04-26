@@ -65,6 +65,12 @@ async def create_student(
         )
 
     db = get_database()
+    # Check if they are already an advisor
+    if await db.advisors.find_one({"$or": [{"firebase_uid": uid}, {"college_email": claim_email}]}):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This account is registered as an Advisor. Please use the Advisor Portal.",
+        )
     now = datetime.now(timezone.utc)
     doc = payload.model_dump(by_alias=False)
     doc.pop("referral_code", None)
@@ -127,6 +133,7 @@ async def create_student(
         email=payload.email,
         name=payload.name,
         created_at=now,
+        role="student",
     )
 
 
@@ -135,12 +142,16 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
     uid = claims["uid"]
     db = get_database()
     doc = await db.students.find_one({"firebase_uid": uid})
+    if doc and "role" not in doc:
+        await db.students.update_one({"_id": doc["_id"]}, {"$set": {"role": "student"}})
+        doc["role"] = "student"
+
     if not doc:
         # Check if they are already an advisor
         advisor_doc = await db.advisors.find_one({"firebase_uid": uid})
         if advisor_doc:
             raise HTTPException(
-                status_code=403, 
+                status_code=403,
                 detail="This account is registered as an Advisor. Please use the Advisor Portal."
             )
 
@@ -148,7 +159,15 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
         email = (claims.get("email") or "").lower()
         if not email:
             raise HTTPException(status_code=404, detail="Student profile not found")
-        
+
+        # Prevent advisors from accidentally creating student skeletons
+        import re
+        if bool(re.match(r".*@.*(\.ac\.in|\.edu\.in|\.edu)$", email, re.IGNORECASE)):
+             raise HTTPException(
+                 status_code=403,
+                 detail="Your college email indicates you are an Advisor. Please use the Advisor Portal."
+             )
+
         now = datetime.now(timezone.utc)
         new_doc = {
             "firebase_uid": uid,
@@ -163,12 +182,13 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
             "created_at": now,
             "updated_at": now,
             "total_sessions": 0,
+            "role": "student",
             "is_self_healed": True
         }
         res = await db.students.insert_one(new_doc)
         new_doc["_id"] = res.inserted_id
         doc = new_doc
-
+ 
     # Calculate stats dynamically
     confirmed_bookings = await db.bookings.find({
         "student_email": doc["email"],

@@ -66,6 +66,8 @@ class AdvisorCreate(BaseModel):
 
     id_upload_token: Optional[str] = Field(default=None, alias="idUploadToken")
 
+    role: str = "advisor"
+
     referral_code: Optional[str] = Field(default=None, alias="referralCode")
 
 
@@ -169,4 +171,5 @@ class AdvisorResponse(BaseModel):
     name: str
 
     created_at: datetime
+    role: str = "advisor"
 

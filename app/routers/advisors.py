@@ -373,8 +373,14 @@ async def create_advisor(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="College email does not match your Firebase sign-in session.",
         )
-
+ 
     db = get_database()
+    # Check if they are already a student
+    if await db.students.find_one({"$or": [{"firebase_uid": uid}, {"email": claim_email}]}):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This account is registered as a Student. Please use the Student Portal.",
+        )
     front_key = payload.college_id_front_key
     back_key = payload.college_id_back_key
 
@@ -522,6 +528,7 @@ async def create_advisor(
         college_email=payload.college_email,
         name=payload.name,
         created_at=now,
+        role="advisor",
     )
 
 
@@ -530,6 +537,10 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
     uid = claims["uid"]
     db = get_database()
     doc = await db.advisors.find_one({"firebase_uid": uid})
+    if doc and "role" not in doc:
+        await db.advisors.update_one({"_id": doc["_id"]}, {"$set": {"role": "advisor"}})
+        doc["role"] = "advisor"
+
     if not doc:
         # Check if they are already a student
         student_doc = await db.students.find_one({"firebase_uid": uid})
@@ -548,8 +559,9 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
         import re
         is_advisor_email = bool(re.match(r".*@.*(\.ac\.in|\.edu\.in|\.edu)$", email, re.IGNORECASE))
         if not is_advisor_email:
-             # If they hit /advisors/me but aren't an advisor by email, still create skeleton here
-             # as they explicitly tried to access advisor dashboard.
+             # If they don't have an advisor email, we might want to block them or at least warn.
+             # For now, we allow it if they specifically chose 'Advisor' in signup, 
+             # but they will be blocked if they have a Student profile (checked above).
              pass
 
         now = datetime.now(timezone.utc)
@@ -567,6 +579,7 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
             "total_earnings": 0,
             "total_sessions": 0,
             "total_students": 0,
+            "role": "advisor",
             "created_at": now,
             "updated_at": now,
             "is_self_healed": True
