@@ -23,6 +23,8 @@ def test_prediction():
     print("\nTesting Case: Rank 15000, OPEN, Gender-Neutral")
     results = predictor.predict(15000, "OPEN", "Gender-Neutral")
     print(f"Results found: {len(results)}")
+    for i, r in enumerate(results[:10]):
+        print(f"{i+1}. [{r['Type']}] {r['Institute']} - {r['Program']} (Rank: {r['ClosingRank']}, Status: {r['Status']})")
 
 if __name__ == "__main__":
     test_prediction()
