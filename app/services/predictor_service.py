@@ -27,20 +27,42 @@ class CollegePredictor:
         filtered = self.df[
             (self.df['Category'] == category) & 
             (self.df['Gender'] == gender)
-        ]
+        ].copy()
 
         if filtered.empty:
             return []
 
         # Find colleges where user_rank <= ClosingRank (eligible colleges)
-        # Sort them by ClosingRank to find the ones closest to the user_rank
-        eligible = filtered[filtered['ClosingRank'] >= user_rank].sort_values(by='ClosingRank')
+        eligible = filtered[filtered['ClosingRank'] >= user_rank].copy()
         
         if eligible.empty:
             return []
+            
+        # Detect Institute Type
+        def get_type(name):
+            name_upper = name.upper()
+            if "INDIAN INSTITUTE OF TECHNOLOGY" in name_upper:
+                return "IIT"
+            if "NATIONAL INSTITUTE OF TECHNOLOGY" in name_upper or ", NIT" in name_upper or " NIT " in name_upper or name_upper.startswith("NIT "):
+                return "NIT"
+            if "INDIAN INSTITUTE OF INFORMATION TECHNOLOGY" in name_upper or "IIIT" in name_upper:
+                return "IIIT"
+            return "Other"
+
+        eligible['Type'] = eligible['Institute'].apply(get_type)
+
+        # Categorize results
+        # Dream: Closing rank is within 20% of user rank (Close to missing)
+        # Safe: Closing rank is > 20% above user rank
+        eligible['Status'] = eligible['ClosingRank'].apply(
+            lambda x: "Dream" if x < user_rank * 1.2 else "Safe"
+        )
+
+        # Sort: Dream first (alphabetically D < S), then by ClosingRank
+        eligible = eligible.sort_values(by=['Status', 'ClosingRank'], ascending=[True, True])
         
-        # Take top 5 closest safe/reach colleges
-        results = eligible.head(5).to_dict(orient='records')
+        # Return up to 50 results
+        results = eligible.head(50).to_dict(orient='records')
         return results
 
     def get_all_colleges(self):
