@@ -1,0 +1,847 @@
+Institute,Program,Category,Gender,ClosingRank
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,1
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),ST (PwD),Gender-Neutral,1
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),ST (PwD),Gender-Neutral,2
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,2
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,3
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,3
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,3
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,3
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST (PwD),Gender-Neutral,3
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,4
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,4
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST (PwD),Gender-Neutral,4
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,4
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,4
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),ST (PwD),Gender-Neutral,5
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,5
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,6
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,6
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,6
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,7
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,7
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,8
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,8
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),SC (PwD),Gender-Neutral,9
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,9
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,9
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,9
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,11
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,11
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),12
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,13
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,14
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL (PwD),Gender-Neutral,15
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,15
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,15
+Indian Institute of Technology Madras,Aerospace Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN,Female-only (including Supernumerary),16
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,16
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,17
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,17
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,18
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,18
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,19
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,19
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,20
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,20
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),20
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,22
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,23
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN (PwD),Gender-Neutral,24
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,24
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,25
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,25
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,26
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,26
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,27
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,27
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,28
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,28
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,28
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN (PwD),Gender-Neutral,29
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,29
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,29
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,31
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,32
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN (PwD),Gender-Neutral,33
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,33
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,34
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,34
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,34
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),35
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,35
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS (PwD),Gender-Neutral,36
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,37
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL (PwD),Gender-Neutral,37
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,38
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,38
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),EWS (PwD),Gender-Neutral,38
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,39
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,39
+Indian Institute of Technology Bombay,Engineering Physics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,40
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),EWS (PwD),Gender-Neutral,41
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,41
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Female-only (including Supernumerary),41
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,42
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,42
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,43
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),ST,Gender-Neutral,44
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,45
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,45
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Female-only (including Supernumerary),46
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,47
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),OPEN (PwD),Gender-Neutral,47
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,47
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,48
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,49
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,50
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,52
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),53
+Indian Institute of Technology Bhubaneswar,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,54
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,54
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,54
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,55
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,56
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,57
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,58
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,58
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,59
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,60
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,61
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),63
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,64
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,64
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,65
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),EWS,Gender-Neutral,65
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,65
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,65
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,66
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,66
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,68
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,69
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,69
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),69
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL (PwD),Female-only (including Supernumerary),70
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),70
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,70
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,73
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Gender-Neutral,74
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),OPEN (PwD),Gender-Neutral,74
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,74
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,75
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),76
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,77
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,77
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,77
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,78
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),79
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,80
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,80
+Indian Institute of Technology Delhi,Chemical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,81
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,82
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,84
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),85
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),87
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,87
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,87
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL (PwD),Gender-Neutral,87
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,87
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),88
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL (PwD),Female-only (including Supernumerary),89
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,90
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,90
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL (PwD),Female-only (including Supernumerary),90
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,91
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,91
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,93
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,93
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,95
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,96
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,97
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,98
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),98
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,99
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,100
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,101
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,102
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,103
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,103
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,105
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,106
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,108
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,108
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),109
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),110
+Indian Institute of Technology Dharwad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,110
+Indian Institute of Technology Delhi,Energy Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,111
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),112
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,113
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),SC,Gender-Neutral,113
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,114
+Indian Institute of Technology Madras,Aerospace Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Gender-Neutral,115
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,116
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),117
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,118
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,120
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,121
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),122
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),123
+Indian Institute of Technology Delhi,Engineering Physics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,124
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,124
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,125
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),128
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,128
+Indian Institute of Technology Kanpur,Aerospace Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,130
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),133
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,135
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,136
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,137
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,138
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),138
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,139
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,140
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,141
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,142
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),144
+Indian Institute of Technology Mandi,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,145
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),145
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,147
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,148
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),149
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,151
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),ST,Gender-Neutral,152
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Gender-Neutral,154
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,154
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,154
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,155
+Indian Institute of Technology Kharagpur,Instrumentation Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,156
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,158
+Indian Institute of Technology Palakkad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,160
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL,Gender-Neutral,163
+Indian Institute of Technology Bhubaneswar,Electronics and Communication Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,164
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Female-only (including Supernumerary),164
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,164
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,165
+Indian Institute of Technology Hyderabad,Industrial Chemistry (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,166
+Indian Institute of Technology Tirupati,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,167
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),171
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,171
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),171
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,172
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,175
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,176
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,178
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,179
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,179
+Indian Institute of Technology Hyderabad,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,181
+Indian Institute of Technology Bhilai,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,182
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,183
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,184
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,184
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),EWS,Gender-Neutral,185
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN,Gender-Neutral,186
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,186
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,188
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Female-only (including Supernumerary),191
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,191
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),192
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,192
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,193
+Indian Institute of Technology Delhi,Chemical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN (PwD),Gender-Neutral,196
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,197
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),198
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,202
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,204
+Indian Institute of Technology (BHU) Varanasi,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,205
+Indian Institute of Technology Patna,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,206
+Indian Institute of Technology Indore,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,208
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),SC,Gender-Neutral,208
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,209
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,209
+Indian Institute of Technology Delhi,Materials Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,210
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,211
+Indian Institute of Technology (ISM) Dhanbad,Mathematics and Computing (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,215
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,216
+Indian Institute of Technology Madras,Engineering Design (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN (PwD),Gender-Neutral,217
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,219
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),EWS,Gender-Neutral,222
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),ST,Gender-Neutral,222
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),SC,Gender-Neutral,222
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,225
+Indian Institute of Technology Madras,Engineering Physics (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,227
+Indian Institute of Technology Tirupati,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,228
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),231
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,231
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),EWS,Gender-Neutral,232
+Indian Institute of Technology Ropar,Artificial Intelligence and Data Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,232
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,234
+Indian Institute of Technology Bhilai,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,234
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),236
+Indian Institute of Technology Kharagpur,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,238
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),ST,Gender-Neutral,238
+Indian Institute of Technology Kanpur,Mechanical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Gender-Neutral,240
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),241
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN (PwD),Female-only (including Supernumerary),242
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),EWS,Gender-Neutral,243
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),ST,Gender-Neutral,244
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,244
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,246
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Female-only (including Supernumerary),248
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,249
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Female-only (including Supernumerary),250
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),SC,Gender-Neutral,250
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),253
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),255
+Indian Institute of Technology Bhubaneswar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,257
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,257
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),258
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),EWS,Gender-Neutral,259
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),260
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,261
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),EWS,Gender-Neutral,264
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,265
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),ST,Gender-Neutral,266
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),270
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,270
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),EWS,Gender-Neutral,270
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,277
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,281
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,282
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),283
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,283
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),SC,Gender-Neutral,284
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,284
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,287
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),ST,Gender-Neutral,289
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,290
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,290
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),EWS,Gender-Neutral,290
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,291
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),OPEN,Gender-Neutral,292
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),292
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Gender-Neutral,293
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,293
+Indian Institute of Technology Gandhinagar,Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,295
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Female-only (including Supernumerary),296
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),301
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,301
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,303
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,304
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),306
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),310
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,310
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,312
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OPEN,Gender-Neutral,316
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL,Gender-Neutral,317
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),SC,Gender-Neutral,318
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),EWS,Gender-Neutral,320
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,324
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,325
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,325
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,325
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),326
+Indian Institute of Technology Madras,Physics (4 Years Bachelor of Science),SC,Gender-Neutral,326
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,330
+Indian Institute of Technology Bombay,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),331
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,333
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,335
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),ST,Gender-Neutral,336
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,341
+Indian Institute of Technology Gandhinagar,Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,341
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,341
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),342
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,343
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),345
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),348
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,349
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,350
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,351
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,352
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN,Gender-Neutral,353
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),ST,Gender-Neutral,355
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),357
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),359
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),360
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,363
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),367
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,370
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,371
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,373
+Indian Institute of Technology Madras,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,374
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,375
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,375
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,378
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),378
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),387
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,388
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),389
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),389
+Indian Institute of Technology Madras,Instrumentation and Biomedical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),390
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),392
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,393
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),393
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,393
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),396
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),396
+Indian Institute of Technology Bombay,BS in Mathematics (4 Years Bachelor of Science),EWS,Gender-Neutral,397
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,398
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,398
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,404
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),404
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,409
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),SC,Gender-Neutral,413
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),ST,Gender-Neutral,415
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,415
+Indian Institute of Technology Madras,Aerospace Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),417
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,418
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),419
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,420
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,420
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,422
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,426
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),SC,Gender-Neutral,427
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,427
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,437
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,439
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),SC,Gender-Neutral,441
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Female-only (including Supernumerary),443
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),443
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,445
+Indian Institute of Technology Ropar,Artificial Intelligence and Data Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,445
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),448
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,450
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Female-only (including Supernumerary),454
+Indian Institute of Technology Roorkee,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,455
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),SC,Gender-Neutral,458
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,460
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,460
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),ST,Gender-Neutral,462
+Indian Institute of Technology Kharagpur,Instrumentation Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,463
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),465
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),465
+Indian Institute of Technology Kanpur,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,467
+Indian Institute of Technology Mandi,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,468
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,469
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),470
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,471
+Indian Institute of Technology Delhi,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,472
+Indian Institute of Technology Patna,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),ST,Gender-Neutral,473
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),SC,Gender-Neutral,474
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),474
+Indian Institute of Technology Bombay,Engineering Physics (4 Years Bachelor of Technology),EWS,Gender-Neutral,475
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),EWS,Female-only (including Supernumerary),476
+Indian Institute of Technology Madras,Engineering Physics (4 Years Bachelor of Technology),ST,Gender-Neutral,478
+Indian Institute of Technology (BHU) Varanasi,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,480
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,481
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),ST,Female-only (including Supernumerary),481
+Indian Institute of Technology Bombay,Energy Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,488
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Energy Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,488
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),490
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),491
+Indian Institute of Technology Indore,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,492
+Indian Institute of Technology Bombay,Engineering Physics (4 Years Bachelor of Technology),ST,Gender-Neutral,493
+Indian Institute of Technology Madras,Engineering Physics (4 Years Bachelor of Technology),EWS,Gender-Neutral,494
+Indian Institute of Technology Goa,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,494
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,494
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,495
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,496
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),497
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Female-only (including Supernumerary),498
+Indian Institute of Technology Palakkad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,498
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),499
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),500
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),501
+Indian Institute of Technology Hyderabad,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,501
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,503
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),505
+Indian Institute of Technology Kanpur,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,508
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),508
+Indian Institute of Technology (BHU) Varanasi,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,510
+Indian Institute of Technology Ropar,Artificial Intelligence and Data Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),514
+Indian Institute of Technology Ropar,Artificial Intelligence and Data Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,516
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),522
+Indian Institute of Technology Bhubaneswar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,525
+Indian Institute of Technology (ISM) Dhanbad,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,525
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),527
+Indian Institute of Technology Roorkee,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,528
+Indian Institute of Technology Delhi,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,530
+Indian Institute of Technology Dharwad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,530
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),532
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,532
+Indian Institute of Technology Hyderabad,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,533
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),534
+Indian Institute of Technology Kanpur,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,535
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,535
+Indian Institute of Technology (ISM) Dhanbad,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,535
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),SC,Gender-Neutral,536
+Indian Institute of Technology Madras,Aerospace Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,536
+Indian Institute of Technology Kharagpur,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,538
+Indian Institute of Technology Madras,Aerospace Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,540
+Indian Institute of Technology Indore,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,543
+Indian Institute of Technology Tirupati,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,545
+Indian Institute of Technology Gandhinagar,Integrated Circuit Design & Technology (4 Years Bachelor of Technology),EWS,Gender-Neutral,547
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL,Gender-Neutral,549
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,550
+Indian Institute of Technology Delhi,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),551
+Indian Institute of Technology Bhubaneswar,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,553
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,553
+Indian Institute of Technology Bombay,Economics (4 Years Bachelor of Science),EWS,Gender-Neutral,554
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,555
+Indian Institute of Technology Bombay,BS in Mathematics (4 Years Bachelor of Science),SC,Gender-Neutral,556
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,556
+Indian Institute of Technology Bombay,BS in Mathematics (4 Years Bachelor of Science),ST,Gender-Neutral,557
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),EWS,Female-only (including Supernumerary),559
+Indian Institute of Technology Kharagpur,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,562
+Indian Institute of Technology Bombay,Economics (4 Years Bachelor of Science),ST,Female-only (including Supernumerary),564
+Indian Institute of Technology Gandhinagar,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,565
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),SC,Gender-Neutral,565
+Indian Institute of Technology (ISM) Dhanbad,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,566
+Indian Institute of Technology Guwahati,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,568
+Indian Institute of Technology Patna,B. Tech. (CSE) and M.Tech in CSE (5 Years B.Tech. + M.Tech./MS (Dual Degree)),ST,Gender-Neutral,570
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,571
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,572
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),EWS,Gender-Neutral,573
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,573
+Indian Institute of Technology Delhi,Energy Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,576
+Indian Institute of Technology Mandi,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,579
+Indian Institute of Technology Guwahati,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),580
+Indian Institute of Technology Kharagpur,Aerospace Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,581
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),582
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),584
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,584
+Indian Institute of Technology Kharagpur,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,585
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),588
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,588
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),590
+Indian Institute of Technology Madras,Artificial Intelligence and Data Analytics (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),590
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,591
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,591
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),593
+Indian Institute of Technology Hyderabad,Engineering Science (4 Years Bachelor of Technology),EWS,Gender-Neutral,594
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,595
+Indian Institute of Technology Patna,B. Tech. (CSE) and M.Tech in CSE (5 Years B.Tech. + M.Tech./MS (Dual Degree)),EWS,Gender-Neutral,599
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,600
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),ST,Female-only (including Supernumerary),602
+Indian Institute of Technology Hyderabad,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),605
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),605
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),607
+Indian Institute of Technology Madras,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,609
+Indian Institute of Technology Palakkad,Data Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,612
+Indian Institute of Technology Mandi,B.Tech in Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,614
+Indian Institute of Technology Mandi,B.Tech in Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,617
+Indian Institute of Technology Madras,Aerospace Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,619
+Indian Institute of Technology Kanpur,Aerospace Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,622
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),624
+Indian Institute of Technology Patna,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),EWS,Gender-Neutral,630
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),630
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),632
+Indian Institute of Technology Gandhinagar,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,634
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),634
+Indian Institute of Technology Tirupati,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,635
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),OBC-NCL,Gender-Neutral,635
+Indian Institute of Technology Delhi,Mathematics and Computing (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Female-only (including Supernumerary),636
+Indian Institute of Technology Delhi,Engineering Physics (4 Years Bachelor of Technology),ST,Gender-Neutral,638
+Indian Institute of Technology Madras,Chemical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),640
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,640
+Indian Institute of Technology Roorkee,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,641
+Indian Institute of Technology Bombay,Engineering Physics (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),642
+Indian Institute of Technology Bombay,Electrical Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),643
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),643
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),644
+Indian Institute of Technology Roorkee,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),647
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),648
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),649
+Indian Institute of Technology Madras,Physics (4 Years Bachelor of Science),ST,Gender-Neutral,652
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),655
+Indian Institute of Technology Delhi,Energy Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,656
+Indian Institute of Technology Bombay,Metallurgical Engineering and Materials Science (4 Years Bachelor of Technology),ST,Gender-Neutral,657
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,657
+Indian Institute of Technology Ropar,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,658
+Indian Institute of Technology Kanpur,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),659
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),659
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,660
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),660
+Indian Institute of Technology Kanpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),661
+Indian Institute of Technology Hyderabad,Engineering Science (4 Years Bachelor of Technology),ST,Gender-Neutral,662
+Indian Institute of Technology Bhubaneswar,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),663
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),665
+Indian Institute of Technology Gandhinagar,Artificial Intelligence (4 Years Bachelor of Technology),SC,Gender-Neutral,666
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,667
+Indian Institute of Technology Guwahati,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,668
+Indian Institute of Technology Hyderabad,Engineering Science (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),672
+Indian Institute of Technology Delhi,Chemical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,673
+Indian Institute of Technology Bhilai,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,676
+Indian Institute of Technology Patna,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,677
+Indian Institute of Technology Bombay,Chemical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,679
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OBC-NCL,Female-only (including Supernumerary),679
+Indian Institute of Technology Bhilai,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Gender-Neutral,680
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),683
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),684
+Indian Institute of Technology Kanpur,Economics (4 Years Bachelor of Science),EWS,Gender-Neutral,685
+Indian Institute of Technology Hyderabad,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,686
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,686
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,687
+Indian Institute of Technology Delhi,Engineering Physics (4 Years Bachelor of Technology),EWS,Gender-Neutral,690
+Indian Institute of Technology Bombay,Economics (4 Years Bachelor of Science),ST,Gender-Neutral,691
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,691
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),SC,Gender-Neutral,692
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),EWS,Female-only (including Supernumerary),693
+Indian Institute of Technology Kanpur,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,696
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),OBC-NCL,Gender-Neutral,697
+Indian Institute of Technology Patna,B.Tech. in Electronics and Communication Engineering and M.Tech. in Communication Systems (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,699
+Indian Institute of Technology Guwahati,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,699
+Indian Institute of Technology Roorkee,Electronics and Communication Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,699
+Indian Institute of Technology Madras,Metallurgical and Materials Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,700
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,701
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),OBC-NCL,Gender-Neutral,704
+Indian Institute of Technology Madras,Engineering Design (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Female-only (including Supernumerary),705
+Indian Institute of Technology Palakkad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),707
+Indian Institute of Technology Kanpur,Economics (4 Years Bachelor of Science),ST,Gender-Neutral,709
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),710
+Indian Institute of Technology Roorkee,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),OPEN,Gender-Neutral,710
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),711
+Indian Institute of Technology Kanpur,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,713
+Indian Institute of Technology Gandhinagar,Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),716
+Indian Institute of Technology Kanpur,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,718
+Indian Institute of Technology Bombay,Chemistry (4 Years Bachelor of Science),SC,Female-only (including Supernumerary),719
+Indian Institute of Technology Patna,B. Tech. (Mathematics & Computing) M. Tech. in (Mathematics & Computing) (5 Years B.Tech. + M.Tech./MS (Dual Degree)),EWS,Gender-Neutral,720
+Indian Institute of Technology Kharagpur,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,721
+Indian Institute of Technology Gandhinagar,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,722
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),723
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,725
+Indian Institute of Technology Bhubaneswar,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,727
+Indian Institute of Technology Delhi,Chemical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,730
+Indian Institute of Technology (ISM) Dhanbad,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),731
+Indian Institute of Technology Bombay,Energy Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,732
+Indian Institute of Technology Hyderabad,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,737
+Indian Institute of Technology Bhubaneswar,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,741
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),OPEN,Gender-Neutral,741
+Indian Institute of Technology Ropar,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,741
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),741
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,741
+Indian Institute of Technology Gandhinagar,Integrated Circuit Design & Technology (4 Years Bachelor of Technology),ST,Gender-Neutral,742
+Indian Institute of Technology Bombay,BS in Mathematics (4 Years Bachelor of Science),OBC-NCL,Gender-Neutral,742
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),ST,Female-only (including Supernumerary),746
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,747
+Indian Institute of Technology Patna,B.Tech (Computer Science and Engineering) - MBA in Digital Business Management (IIM Bodh Gaya) (5 Years Bachelor of Technology and MBA (Dual Degree)),SC,Gender-Neutral,748
+Indian Institute of Technology Gandhinagar,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,754
+Indian Institute of Technology Roorkee,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,758
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),758
+Indian Institute of Technology Indore,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,759
+Indian Institute of Technology Madras,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,759
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),760
+Indian Institute of Technology Madras,Computational Engineering and Mechanics (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),761
+Indian Institute of Technology (ISM) Dhanbad,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,762
+Indian Institute of Technology Jammu,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,763
+Indian Institute of Technology Guwahati,Energy Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,764
+Indian Institute of Technology Palakkad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,764
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),766
+Indian Institute of Technology Bhubaneswar,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,767
+Indian Institute of Technology Delhi,Materials Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,768
+Indian Institute of Technology Bhubaneswar,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,769
+Indian Institute of Technology Madras,Biological Science (4 Years Bachelor of Science),SC,Female-only (including Supernumerary),770
+Indian Institute of Technology (ISM) Dhanbad,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,770
+Indian Institute of Technology Patna,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,771
+Indian Institute of Technology Guwahati,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,771
+Indian Institute of Technology Delhi,Electrical Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),772
+Indian Institute of Technology Kanpur,Aerospace Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,773
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),773
+Indian Institute of Technology Kharagpur,Instrumentation Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,774
+Indian Institute of Technology Kharagpur,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),779
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),780
+Indian Institute of Technology Madras,Aerospace Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,780
+Indian Institute of Technology Kharagpur,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),781
+Indian Institute of Technology Guwahati,Electronics and Communication Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,782
+Indian Institute of Technology Delhi,Chemical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),786
+Indian Institute of Technology Kanpur,Mechanical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,787
+Indian Institute of Technology Patna,Electronics and Communication Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,788
+Indian Institute of Technology Jodhpur,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,791
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,791
+Indian Institute of Technology Indore,Space Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,795
+Indian Institute of Technology Patna,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,796
+Indian Institute of Technology Delhi,Production and Industrial Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,797
+Indian Institute of Technology Guwahati,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,798
+Indian Institute of Technology Roorkee,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,799
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,799
+Indian Institute of Technology Bhilai,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),803
+Indian Institute of Technology Madras,Computer Science and Engineering (4 Years Bachelor of Technology),OPEN,Female-only (including Supernumerary),805
+Indian Institute of Technology (BHU) Varanasi,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,805
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),OPEN,Gender-Neutral,806
+Indian Institute of Technology Madras,Aerospace Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,806
+Indian Institute of Technology Patna,B.Tech (Computer Science and Engineering) - MBA in Digital Business Management (IIM Bodh Gaya) (5 Years Bachelor of Technology and MBA (Dual Degree)),ST,Gender-Neutral,806
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),OBC-NCL,Gender-Neutral,806
+Indian Institute of Technology Ropar,Electrical Engineering (Integrated Circuit Design and Technology) (4 Years Bachelor of Technology),EWS,Gender-Neutral,808
+Indian Institute of Technology Dharwad,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),808
+Indian Institute of Technology Patna,B. Tech. (Mathematics & Computing) M. Tech. in (Mathematics & Computing) (5 Years B.Tech. + M.Tech./MS (Dual Degree)),ST,Gender-Neutral,811
+Indian Institute of Technology Jammu,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,811
+Indian Institute of Technology Delhi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),813
+Indian Institute of Technology Indore,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),819
+Indian Institute of Technology Bombay,Engineering Physics (4 Years Bachelor of Technology),SC,Gender-Neutral,820
+Indian Institute of Technology Kharagpur,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,820
+Indian Institute of Technology Bombay,Environmental Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,821
+Indian Institute of Technology Roorkee,Energy Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,822
+Indian Institute of Technology Hyderabad,Artificial Intelligence (4 Years Bachelor of Technology),OPEN,Gender-Neutral,823
+Indian Institute of Technology Roorkee,Economics (5 Years Bachelor of Science and Master of Science (Dual Degree)),EWS,Gender-Neutral,824
+Indian Institute of Technology Ropar,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,828
+Indian Institute of Technology Dharwad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,828
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),829
+Indian Institute of Technology Bhubaneswar,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),830
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN,Gender-Neutral,830
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,832
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,832
+Indian Institute of Technology Ropar,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),834
+Indian Institute of Technology Delhi,Production and Industrial Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,836
+Indian Institute of Technology Madras,Engineering Design (5 Years Bachelor and Master of Technology (Dual Degree)),EWS,Gender-Neutral,838
+Indian Institute of Technology (BHU) Varanasi,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,838
+Indian Institute of Technology Kharagpur,Artificial Intelligence (4 Years Bachelor of Technology),OPEN,Gender-Neutral,839
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),840
+Indian Institute of Technology Dharwad,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,840
+Indian Institute of Technology Bombay,Energy Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,841
+Indian Institute of Technology Indore,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,842
+Indian Institute of Technology Madras,Electrical Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),843
+Indian Institute of Technology Delhi,Chemical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Gender-Neutral,844
+Indian Institute of Technology Patna,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),844
+Indian Institute of Technology Bhubaneswar,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),846
+Indian Institute of Technology Goa,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,847
+Indian Institute of Technology Delhi,Chemical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,848
+Indian Institute of Technology Patna,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,848
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),EWS,Female-only (including Supernumerary),849
+Indian Institute of Technology Patna,B. Tech. (CSE) and M.Tech in CSE (5 Years B.Tech. + M.Tech./MS (Dual Degree)),SC,Gender-Neutral,852
+Indian Institute of Technology Ropar,Electrical Engineering (Integrated Circuit Design and Technology) (4 Years Bachelor of Technology),ST,Gender-Neutral,852
+Indian Institute of Technology Bombay,Economics (4 Years Bachelor of Science),SC,Gender-Neutral,855
+Indian Institute of Technology Kharagpur,Industrial and Systems Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,856
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),856
+Indian Institute of Technology Kharagpur,Industrial and Systems Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,857
+Indian Institute of Technology Hyderabad,Materials Science and Metallurgical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,858
+Indian Institute of Technology Roorkee,Mathematics & Computing (5 Years Bachelor of Science and Master of Science (Dual Degree)),SC,Female-only (including Supernumerary),858
+Indian Institute of Technology Ropar,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,859
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,860
+Indian Institute of Technology Bhubaneswar,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,862
+Indian Institute of Technology Delhi,Electrical Engineering (Power and Automation) (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),864
+Indian Institute of Technology Dharwad,Mathematics and Computing (4 Years Bachelor of Technology),EWS,Gender-Neutral,864
+Indian Institute of Technology (BHU) Varanasi,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,865
+Indian Institute of Technology Guwahati,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),867
+Indian Institute of Technology Delhi,Abu Dhabi Campus - Energy Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,868
+Indian Institute of Technology Delhi,Biotechnology and Biochemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,869
+Indian Institute of Technology Palakkad,Data Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),870
+Indian Institute of Technology Kharagpur,Aerospace Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,871
+Indian Institute of Technology Hyderabad,Biotechnology and Bioinformatics (4 Years Bachelor of Technology),ST,Gender-Neutral,872
+Indian Institute of Technology Mandi,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),876
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),877
+Indian Institute of Technology Bombay,Aerospace Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),879
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),OPEN,Gender-Neutral,879
+Indian Institute of Technology Bhilai,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,881
+Indian Institute of Technology Tirupati,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,882
+Indian Institute of Technology Delhi,Materials Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,883
+Indian Institute of Technology Hyderabad,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),887
+Indian Institute of Technology Kanpur,Statistics and Data Science (4 Years Bachelor of Science),SC,Female-only (including Supernumerary),888
+Indian Institute of Technology Delhi,Engineering and Computational Mechanics (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),890
+Indian Institute of Technology Dharwad,Electrical and Electronics Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,891
+Indian Institute of Technology Kharagpur,Electronics and Electrical Communication Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),892
+Indian Institute of Technology Jodhpur,Electronics Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,892
+Indian Institute of Technology Patna,Electrical and Electronics Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,893
+Indian Institute of Technology Hyderabad,Engineering Physics (4 Years Bachelor of Technology),ST,Gender-Neutral,894
+Indian Institute of Technology Gandhinagar,Integrated Circuit Design & Technology (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),895
+Indian Institute of Technology Delhi,Civil Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,896
+Indian Institute of Technology Indore,Mathematics and Computing (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,896
+Indian Institute of Technology Jodhpur,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),897
+Indian Institute of Technology Tirupati,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,898
+Indian Institute of Technology Bhilai,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,900
+Indian Institute of Technology Hyderabad,Computational Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,900
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),901
+Indian Institute of Technology Mandi,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,902
+Indian Institute of Technology Kharagpur,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,902
+Indian Institute of Technology (BHU) Varanasi,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),903
+Indian Institute of Technology Gandhinagar,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,904
+Indian Institute of Technology Bhilai,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),905
+Indian Institute of Technology Hyderabad,Mathematics and Computing (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),911
+Indian Institute of Technology Roorkee,Engineering Physics (4 Years Bachelor of Technology),ST,Gender-Neutral,911
+Indian Institute of Technology Bombay,Metallurgical Engineering and Materials Science (4 Years Bachelor of Technology),EWS,Gender-Neutral,912
+Indian Institute of Technology Indore,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),912
+Indian Institute of Technology Patna,B. Tech. (ECE) -M. Tech. in VLSI (5 Years B.Tech. + M.Tech./MS (Dual Degree)),ST,Gender-Neutral,916
+Indian Institute of Technology Kharagpur,Biotechnology and Biochemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,918
+Indian Institute of Technology (ISM) Dhanbad,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,919
+Indian Institute of Technology Bombay,Mechanical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,919
+Indian Institute of Technology Madras,Engineering Design (5 Years Bachelor and Master of Technology (Dual Degree)),ST,Gender-Neutral,922
+Indian Institute of Technology Goa,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,925
+Indian Institute of Technology Bhilai,Data Science and Artificial Intelligence (4 Years Bachelor of Technology),EWS,Gender-Neutral,926
+Indian Institute of Technology Roorkee,Engineering Physics (4 Years Bachelor of Technology),EWS,Gender-Neutral,929
+Indian Institute of Technology Bombay,Civil Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,934
+Indian Institute of Technology Roorkee,Production and Industrial Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,936
+Indian Institute of Technology Delhi,Textile Technology (4 Years Bachelor of Technology),ST,Gender-Neutral,937
+Indian Institute of Technology Roorkee,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,938
+Indian Institute of Technology Madras,Civil Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,940
+Indian Institute of Technology Jodhpur,Electronics Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,941
+Indian Institute of Technology Bombay,Environmental Science and Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,942
+Indian Institute of Technology Kharagpur,Instrumentation Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,943
+Indian Institute of Technology (BHU) Varanasi,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,946
+Indian Institute of Technology Hyderabad,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,948
+Indian Institute of Technology Gandhinagar,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),951
+Indian Institute of Technology Roorkee,Energy Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,952
+Indian Institute of Technology (ISM) Dhanbad,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,954
+Indian Institute of Technology Hyderabad,Mechanical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),956
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),SC,Female-only (including Supernumerary),956
+Indian Institute of Technology Bombay,BS in Mathematics (4 Years Bachelor of Science),OPEN,Gender-Neutral,957
+Indian Institute of Technology Hyderabad,Biomedical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),957
+Indian Institute of Technology Guwahati,Electronics and Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,958
+Indian Institute of Technology Kharagpur,Metallurgical and Materials Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,960
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),960
+Indian Institute of Technology Delhi,Biotechnology and Biochemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,964
+Indian Institute of Technology Kharagpur,Mathematics and Computing (4 Years Bachelor of Science),SC,Female-only (including Supernumerary),965
+Indian Institute of Technology (ISM) Dhanbad,Civil Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,965
+Indian Institute of Technology Delhi,Mechanical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,966
+Indian Institute of Technology Patna,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),967
+Indian Institute of Technology Roorkee,Mechanical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),969
+Indian Institute of Technology Madras,Engineering Physics (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),970
+Indian Institute of Technology Patna,B. Tech. (Mathematics & Computing) M. Tech. in (Mathematics & Computing) (5 Years B.Tech. + M.Tech./MS (Dual Degree)),SC,Gender-Neutral,971
+Indian Institute of Technology Hyderabad,Electrical Engineering (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,971
+Indian Institute of Technology Guwahati,Chemical Science and Technology (4 Years Bachelor of Technology),ST,Gender-Neutral,972
+Indian Institute of Technology Delhi,Energy Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,974
+Indian Institute of Technology Dharwad,Mathematics and Computing (4 Years Bachelor of Technology),ST,Gender-Neutral,974
+Indian Institute of Technology Bombay,Industrial Engineering and Operations Research (4 Years Bachelor of Technology),OBC-NCL,Gender-Neutral,974
+Indian Institute of Technology Ropar,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,976
+Indian Institute of Technology Bombay,Economics (4 Years Bachelor of Science),EWS,Female-only (including Supernumerary),978
+Indian Institute of Technology Indore,Electrical Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,978
+Indian Institute of Technology Mandi,B.Tech in Microelectronics & VLSI (4 Years Bachelor of Technology),ST,Gender-Neutral,979
+Indian Institute of Technology Guwahati,Chemical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,981
+Indian Institute of Technology Madras,Engineering Physics (4 Years Bachelor of Technology),SC,Gender-Neutral,982
+Indian Institute of Technology Indore,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,985
+Indian Institute of Technology (BHU) Varanasi,Chemical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,986
+Indian Institute of Technology Roorkee,Computer Science and Engineering (4 Years Bachelor of Technology),OBC-NCL,Female-only (including Supernumerary),986
+Indian Institute of Technology (ISM) Dhanbad,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,988
+Indian Institute of Technology (ISM) Dhanbad,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),991
+Indian Institute of Technology Bhubaneswar,Mathematics and Computing (4 Years Bachelor of Technology),SC,Gender-Neutral,992
+Indian Institute of Technology Madras,Mechanical Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),993
+Indian Institute of Technology Palakkad,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,993
+Indian Institute of Technology Kharagpur,Economics (4 Years Bachelor of Science),EWS,Gender-Neutral,995
+Indian Institute of Technology Mandi,B.Tech in Microelectronics & VLSI (4 Years Bachelor of Technology),EWS,Gender-Neutral,996
+Indian Institute of Technology Delhi,Computer Science and Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),OPEN,Female-only (including Supernumerary),996
+Indian Institute of Technology Bombay,Electrical Engineering (5 Years Bachelor and Master of Technology (Dual Degree)),SC,Female-only (including Supernumerary),998
+Indian Institute of Technology Ropar,Artificial Intelligence and Data Engineering (4 Years Bachelor of Technology),SC,Gender-Neutral,999
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),1000
+Indian Institute of Technology Jodhpur,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),SC,Gender-Neutral,1001
+Indian Institute of Technology Jodhpur,Electrical Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,1001
+Indian Institute of Technology Ropar,Mathematics and Computing (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1001
+Indian Institute of Technology Dharwad,Electronics and Communication Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1002
+Indian Institute of Technology Kharagpur,Economics (4 Years Bachelor of Science),ST,Gender-Neutral,1006
+Indian Institute of Technology Patna,Electrical and Electronics Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,1006
+Indian Institute of Technology Kharagpur,Instrumentation Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1007
+Indian Institute of Technology Hyderabad,Electrical Engineering (IC Design and Technology) (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),1008
+Indian Institute of Technology (BHU) Varanasi,Electrical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1008
+Indian Institute of Technology Jammu,Chemical Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1010
+Indian Institute of Technology Madras,Physics (4 Years Bachelor of Science),OBC-NCL,Gender-Neutral,1011
+Indian Institute of Technology Mandi,Computer Science and Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),1012
+Indian Institute of Technology Goa,Electrical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1012
+Indian Institute of Technology Patna,Artificial Intelligence and Data Science (4 Years Bachelor of Technology),SC,Gender-Neutral,1014
+Indian Institute of Technology Roorkee,Metallurgical and Materials Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1016
+Indian Institute of Technology Bombay,Chemistry (4 Years Bachelor of Science),ST,Gender-Neutral,1017
+Indian Institute of Technology Madras,Biological Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1019
+Indian Institute of Technology Madras,Civil Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1020
+Indian Institute of Technology Roorkee,Production and Industrial Engineering (4 Years Bachelor of Technology),EWS,Gender-Neutral,1022
+Indian Institute of Technology Kanpur,Mathematics and Scientific Computing (4 Years Bachelor of Science),OPEN,Gender-Neutral,1023
+Indian Institute of Technology Ropar,Mechanical Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1023
+Indian Institute of Technology Madras,Naval Architecture and Ocean Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1024
+Indian Institute of Technology (BHU) Varanasi,Electronics Engineering (4 Years Bachelor of Technology),EWS,Female-only (including Supernumerary),1026
+Indian Institute of Technology Gandhinagar,Computer Science and Engineering (4 Years Bachelor of Technology),SC,Female-only (including Supernumerary),1027
+Indian Institute of Technology Kanpur,Materials Science and Engineering (4 Years Bachelor of Technology),ST,Gender-Neutral,1029
+Indian Institute of Technology Goa,Computer Science and Engineering (4 Years Bachelor of Technology),ST,Female-only (including Supernumerary),1030

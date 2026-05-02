@@ -43,6 +43,10 @@ async def connect_db() -> None:
     await db.bookings.create_index("status")
     await db.bookings.create_index("razorpay_order_id")
     await db.bookings.create_index("created_at")
+    
+    # Predictor leads
+    await db.predictor_leads.create_index("email")
+    await db.predictor_leads.create_index("created_at")
 
 
 async def close_db() -> None:
