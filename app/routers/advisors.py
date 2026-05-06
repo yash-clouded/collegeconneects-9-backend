@@ -4,7 +4,7 @@ from typing import Literal
 
 from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, status
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 from pymongo.errors import DuplicateKeyError, OperationFailure, PyMongoError
 
 from app.database import get_database
