@@ -96,14 +96,44 @@ class AdvisorProfileUpdate(BaseModel):
     college_id_front_key: str | None = None
     college_id_back_key: str | None = None
     profile_picture: str | None = None
+    current_study_year: int | None = None
+    study_year_at_signup: int | None = None
+    study_year_anchor_date: str | None = None
+    roll_number: str | None = None
+    upi_id: str | None = None
+    detected_college: str | None = None
+    academic_status: str | None = None
+
+    @field_validator("current_study_year", "study_year_at_signup", mode="before")
+    @classmethod
+    def validate_study_year(cls, v: object) -> int | None:
+        if v is None or v == "":
+            return None
+        try:
+            return int(v)
+        except (ValueError, TypeError):
+            return None
+
+    @field_validator("languages", "preferred_timezones", mode="before")
+    @classmethod
+    def validate_lists(cls, v: object) -> list[str] | None:
+        if v is None:
+            return None
+        if isinstance(v, str):
+            return [x.strip() for x in v.split(",") if x.strip()]
+        if isinstance(v, list):
+            return [str(x).strip() for x in v if str(x).strip()]
+        return None
 
 
 class AdvisorBookingCreate(BaseModel):
     advisor_id: str
     selected_slot: str
+    selected_date: str
 
 
 class AdvisorSessionUpdateNotify(BaseModel):
+    booking_id: str
     action: Literal["accept", "reject", "change"]
     student_email: str
     student_name: str
@@ -234,8 +264,12 @@ async def book_advisor(
     if not advisor_email:
         raise HTTPException(status_code=400, detail="Advisor email is missing.")
     selected_slot = str(payload.selected_slot or "").strip()
+    selected_date = str(payload.selected_date or "").strip() # e.g. "2024-05-10"
     if not selected_slot:
         raise HTTPException(status_code=400, detail="Select one preferred time slot.")
+    if not selected_date:
+        raise HTTPException(status_code=400, detail="Select a date for the session.")
+        
     preferred_slots = advisor.get("preferred_timezones") or advisor.get("preferredTimezones") or []
     if not isinstance(preferred_slots, list):
         preferred_slots = []
@@ -246,13 +280,47 @@ async def book_advisor(
             detail="Selected slot must be one of advisor preferred time slots.",
         )
 
+    # Calculate scheduled_time and end_time
+    # selected_slot is usually something like "10:00 AM - 11:00 AM" or "10:00 AM"
+    # We'll try to parse the start time from the slot.
+    try:
+        import re
+        # Try to find something like "10:00 AM" or "10 PM"
+        time_match = re.search(r"(\d{1,2}(?::\d{2})?\s*(?:AM|PM|am|pm))", selected_slot)
+        if time_match:
+            time_str = time_match.group(1)
+            # Combine date and time
+            dt_str = f"{selected_date} {time_str}"
+            # Try parsing with various formats
+            formats = ["%Y-%m-%d %I:%M %p", "%Y-%m-%d %I %p", "%Y-%m-%d %I:%M%p", "%Y-%m-%d %I%p"]
+            parsed_dt = None
+            for f in formats:
+                try:
+                    parsed_dt = datetime.strptime(dt_str, f)
+                    break
+                except ValueError:
+                    continue
+            
+            if parsed_dt:
+                # Assume local time for now, or UTC if preferred. 
+                # Ideally we'd handle timezones but for simplicity:
+                scheduled_time = parsed_dt.replace(tzinfo=timezone.utc)
+            else:
+                scheduled_time = now + timedelta(days=1)
+        else:
+            scheduled_time = now + timedelta(days=1)
+    except Exception:
+        scheduled_time = now + timedelta(days=1)
+    
+    end_time = scheduled_time + timedelta(hours=1)
+
     try:
         send_booking_email_to_advisor(
             advisor_email=advisor_email,
             advisor_name=str(advisor.get("name") or "Advisor"),
             student_name=str(student.get("name") or "Student"),
             student_email=student_email,
-            selected_slot=selected_slot,
+            selected_slot=f"{selected_date} at {selected_slot}",
         )
     except Exception as e:
         raise HTTPException(
@@ -261,11 +329,6 @@ async def book_advisor(
         ) from e
 
     # Persist the booking in the database
-    now = datetime.now(timezone.utc)
-    # Assume 1 hour session for now, adjust if there's a specific duration
-    # We need to parse selected_slot or just store it. 
-    # For now, we'll store the text slot and a placeholder scheduled_time if we can't parse it easily.
-    # In a real app, selected_slot should be a timestamp.
     booking_doc = {
         "advisor_id": str(advisor["_id"]),
         "student_id": str(student["_id"]),
@@ -273,10 +336,11 @@ async def book_advisor(
         "student_name": str(student.get("name") or "Student"),
         "student_email": student_email,
         "selected_slot": selected_slot,
+        "selected_date": selected_date,
         "session_price": str(advisor.get("session_price", "")),
         "status": "pending",
-        "scheduled_time": now + timedelta(days=1), # Placeholder: use actual slot parsing if possible
-        "end_time": now + timedelta(days=1, hours=1),
+        "scheduled_time": scheduled_time,
+        "end_time": end_time,
         "student_joined": False,
         "advisor_joined": False,
         "created_at": now,
@@ -325,8 +389,36 @@ async def notify_student_about_session_update(
     else:
         new_slot = None
 
+    booking_id = payload.booking_id
+    if not ObjectId.is_valid(booking_id):
+        raise HTTPException(status_code=400, detail="Invalid booking id.")
+
     if payload.action == "accept":
         student_email = str(payload.student_email).strip().lower()
+        booking = await db.bookings.find_one({"_id": ObjectId(booking_id)})
+        if not booking:
+            raise HTTPException(status_code=404, detail="Booking not found.")
+
+        update_fields: dict = {"status": "confirmed", "updated_at": datetime.now(timezone.utc)}
+
+        # Generate Meet Link if possible
+        try:
+            meet_data = google_meet_service.create_actual_meeting_link(
+                summary=f"CollegeConnect: {advisor_name} <> {booking.get('student_name', 'Student')}",
+                start_time=booking["scheduled_time"],
+                end_time=booking["end_time"]
+            )
+            if meet_data:
+                update_fields["meet_link"] = meet_data["meet_link"]
+                update_fields["google_event_id"] = meet_data["event_id"]
+        except Exception as e:
+            # Don't fail the whole request if Google Calendar fails, but log it or inform
+            print(f"Google Meet creation failed: {e}")
+
+        await db.bookings.update_one(
+            {"_id": ObjectId(booking_id)},
+            {"$set": update_fields}
+        )
         await db.advisors.update_one(
             {"_id": advisor["_id"]},
             {"$inc": {"total_sessions": 1}, "$set": {"updated_at": datetime.now(timezone.utc)}},
@@ -337,6 +429,25 @@ async def notify_student_about_session_update(
         )
         await apply_referral_rewards_on_session_accept(db, advisor, student_email)
         return {"ok": True}
+
+    if payload.action == "reject":
+        await db.bookings.update_one(
+            {"_id": ObjectId(booking_id)},
+            {"$set": {"status": "cancelled", "updated_at": datetime.now(timezone.utc)}}
+        )
+    elif payload.action == "change":
+        new_slot = str(payload.new_slot or "").strip()
+        if not new_slot:
+            raise HTTPException(status_code=400, detail="New slot is required for change.")
+        if new_slot not in normalized_slots:
+            raise HTTPException(
+                status_code=400,
+                detail="New slot must be one of your preferred time slots.",
+            )
+        await db.bookings.update_one(
+            {"_id": ObjectId(booking_id)},
+            {"$set": {"status": "changed", "selected_slot": new_slot, "updated_at": datetime.now(timezone.utc)}}
+        )
 
     try:
         send_advisor_session_update_email_to_student(
@@ -541,6 +652,11 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
         await db.advisors.update_one({"_id": doc["_id"]}, {"$set": {"role": "advisor"}})
         doc["role"] = "advisor"
 
+    if doc:
+        # Strict role check
+        if doc.get("role") != "advisor":
+             raise HTTPException(status_code=403, detail="Unauthorized access to Advisor portal.")
+    
     if not doc:
         # Check if they are already a student
         student_doc = await db.students.find_one({"firebase_uid": uid})

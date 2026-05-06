@@ -146,6 +146,11 @@ async def get_my_student(claims: dict = Depends(firebase_claims)) -> StudentResp
         await db.students.update_one({"_id": doc["_id"]}, {"$set": {"role": "student"}})
         doc["role"] = "student"
 
+    if doc:
+        # Strict role check
+        if doc.get("role") != "student":
+             raise HTTPException(status_code=403, detail="Unauthorized access to Student portal.")
+
     if not doc:
         # Check if they are already an advisor
         advisor_doc = await db.advisors.find_one({"firebase_uid": uid})

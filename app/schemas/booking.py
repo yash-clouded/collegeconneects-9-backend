@@ -8,6 +8,7 @@ class BookingBase(BaseModel):
     scheduled_time: datetime
     end_time: datetime
     selected_slot: str
+    selected_date: str
     session_price: str
 
 class BookingCreate(BookingBase):

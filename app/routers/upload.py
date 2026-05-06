@@ -86,6 +86,29 @@ class TempCollegeIdPairPresignResponse(BaseModel):
     back: CollegeIdPresignResponse
 
 
+class CollegeIdPairPresignBody(BaseModel):
+    model_config = ConfigDict(populate_by_name=True)
+    front_content_type: str = Field(default="image/jpeg", alias="frontContentType")
+    back_content_type: str = Field(default="image/jpeg", alias="backContentType")
+
+    @field_validator("front_content_type", "back_content_type")
+    @classmethod
+    def validate_mime(cls, v: str) -> str:
+        from app.s3_service import _CONTENT_EXT
+        ct = (v or "").split(";")[0].strip().lower()
+        if ct not in _CONTENT_EXT:
+            raise ValueError(f"Unsupported MIME type {v}. Use JPEG, PNG, or WebP.")
+        return ct
+
+
+class CollegeIdPairPresignResponse(BaseModel):
+    frontUploadUrl: str
+    frontKey: str
+    backUploadUrl: str
+    backKey: str
+    bucket: str
+
+
 @router.post("/college-id/presign", response_model=CollegeIdPresignResponse)
 async def presign_college_id_upload(
     body: CollegeIdPresignBody,
@@ -123,6 +146,41 @@ async def presign_college_id_upload(
         ) from e
 
     return CollegeIdPresignResponse(uploadUrl=url, key=key, bucket=bucket)
+
+
+@router.post("/college-id/presign-pair", response_model=CollegeIdPairPresignResponse)
+async def presign_college_id_pair_upload(
+    body: CollegeIdPairPresignBody,
+    claims: dict = Depends(firebase_claims),
+) -> CollegeIdPairPresignResponse:
+    if not s3_configured():
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="File uploads are not configured. Set AWS S3 environment variables on the API server.",
+        )
+    uid = claims.get("uid") or claims.get("sub")
+    if not uid:
+        raise HTTPException(status_code=401, detail="Invalid token.")
+
+    # Determine role from claims or default to advisor for this context
+    # Usually better to have role in body, but we can infer it
+    role = claims.get("role", "advisor")
+    if role not in ("advisor", "student"):
+        role = "advisor"
+
+    try:
+        f_url, f_key, bucket = generate_college_id_presigned_put(str(uid), role, "front", body.front_content_type)
+        b_url, b_key, _ = generate_college_id_presigned_put(str(uid), role, "back", body.back_content_type)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
+
+    return CollegeIdPairPresignResponse(
+        frontUploadUrl=f_url,
+        frontKey=f_key,
+        backUploadUrl=b_url,
+        backKey=b_key,
+        bucket=bucket
+    )
 
 
 @router.post("/profile-picture/presign", response_model=CollegeIdPresignResponse)
