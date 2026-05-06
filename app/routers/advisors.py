@@ -653,6 +653,16 @@ async def get_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
         doc["role"] = "advisor"
 
     if doc:
+        # Check if they ALSO exist in the students collection (Dual-account detection)
+        student_check = await db.students.find_one({"firebase_uid": uid})
+        if student_check:
+             # If they exist in both, we prioritize the one with the 'advisor' role for .ac.in emails
+             # But for safety, we raise 403 to force a choice or admin intervention
+             raise HTTPException(
+                 status_code=403, 
+                 detail="Security Alert: Dual-role detected. Please contact support to merge your Student and Advisor accounts."
+             )
+        
         # Strict role check
         if doc.get("role") != "advisor":
              raise HTTPException(status_code=403, detail="Unauthorized access to Advisor portal.")
