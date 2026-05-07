@@ -42,6 +42,10 @@ class Settings(BaseSettings):
     razorpay_key_secret: str = ""
     # Your live website URL (e.g., https://collegeconnects.co.in)
     base_url: str = "https://collegeconnects.co.in"
+    jwt_secret_key: str = ""
+    jwt_algorithm: str = "HS256"
+    jwt_access_token_exp_minutes: int = 60 * 24 * 7
+    jwt_issuer: str = "collegeconnect-api"
 
 
 settings = Settings()
