@@ -40,24 +40,24 @@ def _hash_otp(*, otp: str, salt: str) -> str:
     return hashlib.sha256(f"{otp}:{salt}".encode("utf-8")).hexdigest()
 
 
-async def _ensure_profile_exists(role: str, email: str) -> None:
-    db = get_database()
-    if role == "student":
-        exists = await db.students.count_documents({"email": email.lower()}, limit=1)
-    else:
-        exists = await db.advisors.count_documents(
-            {"college_email": email.lower()},
-            limit=1,
-        )
-    if not exists:
-        raise HTTPException(status_code=404, detail=f"{role.title()} account not found.")
+async def _ensure_firebase_user_exists_for_password_reset(email: str) -> None:
+    """Password reset updates Firebase Auth; Mongo may be missing for some accounts that can still sign in."""
+    from firebase_admin import auth as fb_auth
+
+    try:
+        await asyncio.to_thread(fb_auth.get_user_by_email, email)
+    except fb_auth.UserNotFoundError:
+        raise HTTPException(
+            status_code=404,
+            detail="No account found for this email.",
+        ) from None
 
 
 @router.post("/password-reset/request")
 async def request_password_reset(payload: PasswordResetRequest) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_profile_exists(role, email)
+    await _ensure_firebase_user_exists_for_password_reset(email)
 
     db = get_database()
     now = _now()
@@ -111,7 +111,7 @@ async def request_password_reset(payload: PasswordResetRequest) -> dict:
 async def confirm_password_reset(payload: PasswordResetConfirm) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_profile_exists(role, email)
+    await _ensure_firebase_user_exists_for_password_reset(email)
 
     db = get_database()
     now = _now()
