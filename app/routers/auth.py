@@ -3,13 +3,15 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 import hashlib
 import secrets
-import asyncio
+import uuid
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, EmailStr, Field
 
 from app.database import get_database
+from app.jwt_service import create_access_token
 from app.mailer import send_password_reset_otp_email, send_signup_otp_email
+from app.security import hash_password, verify_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -30,27 +32,70 @@ class PasswordResetConfirm(BaseModel):
     new_password: str = Field(min_length=6, max_length=128)
 
 
+class LoginRequest(BaseModel):
+    role: str = Field(pattern="^(student|advisor)$")
+    email: EmailStr
+    password: str = Field(min_length=6, max_length=128)
+
+
 def _now() -> datetime:
-    # Use UTC-aware datetimes to ensure consistency with MongoDB
-    # and avoid naive vs aware comparison issues.
-    return datetime.now(timezone.utc).replace(tzinfo=None)
+    # Always use timezone-aware UTC timestamps for OTP expiry comparisons.
+    return datetime.now(timezone.utc)
 
 
 def _hash_otp(*, otp: str, salt: str) -> str:
     return hashlib.sha256(f"{otp}:{salt}".encode("utf-8")).hexdigest()
 
 
-async def _ensure_firebase_user_exists_for_password_reset(email: str) -> None:
-    """Password reset updates Firebase Auth; Mongo may be missing for some accounts that can still sign in."""
-    from firebase_admin import auth as fb_auth
+def _build_jwt_claims(*, uid: str, email: str, role: str, name: str | None = None) -> dict:
+    return {
+        "uid": uid,
+        "email": email.lower().strip(),
+        "email_verified": True,
+        "name": name or email.split("@")[0],
+        "role": role,
+        "auth_provider": "jwt",
+    }
 
-    try:
-        await asyncio.to_thread(fb_auth.get_user_by_email, email)
-    except fb_auth.UserNotFoundError:
-        raise HTTPException(
-            status_code=404,
-            detail="No account found for this email.",
-        ) from None
+
+async def _issue_login_token(*, role: str, email: str) -> dict:
+    db = get_database()
+    normalized_email = email.lower().strip()
+    account = await db.auth_accounts.find_one({"role": role, "email": normalized_email})
+    if not account:
+        raise HTTPException(status_code=401, detail="Invalid credentials.")
+    claims = _build_jwt_claims(
+        uid=str(account.get("uid") or ""),
+        email=normalized_email,
+        role=role,
+        name=str(account.get("name") or normalized_email.split("@")[0]),
+    )
+    token, expires_in = create_access_token(claims=claims)
+    return {
+        "ok": True,
+        "access_token": token,
+        "token_type": "bearer",
+        "expires_in": expires_in,
+        "user": {
+            "uid": claims["uid"],
+            "email": claims["email"],
+            "role": role,
+            "name": claims["name"],
+        },
+    }
+
+
+async def _ensure_profile_exists(role: str, email: str) -> None:
+    db = get_database()
+    if role == "student":
+        exists = await db.students.count_documents({"email": email.lower()}, limit=1)
+    else:
+        exists = await db.advisors.count_documents(
+            {"college_email": email.lower()},
+            limit=1,
+        )
+    if not exists:
+        raise HTTPException(status_code=404, detail=f"{role.title()} account not found.")
 
 
 @router.post("/password-reset/request")
@@ -68,8 +113,10 @@ async def request_password_reset(payload: PasswordResetRequest) -> dict:
     if active:
         created_at = active.get("created_at")
         if isinstance(created_at, datetime):
-            if created_at.tzinfo is not None:
-                created_at = created_at.replace(tzinfo=None)
+            # Backward compatible: if older OTP docs stored naive datetimes,
+            # assume they were UTC.
+            if created_at.tzinfo is None:
+                created_at = created_at.replace(tzinfo=timezone.utc)
             if (now - created_at).total_seconds() < OTP_RESEND_COOLDOWN_SECONDS:
                 raise HTTPException(
                     status_code=429,
@@ -136,24 +183,85 @@ async def confirm_password_reset(payload: PasswordResetConfirm) -> dict:
         )
         raise HTTPException(status_code=400, detail="Invalid OTP.")
 
-    # OTP verified: reset Firebase Auth password.
-    try:
-        from firebase_admin import auth as fb_auth
+    # OTP verified: update password hash in Mongo for both auth + profile collections.
+    new_hash = hash_password(payload.new_password)
+    now_dt = _now()
+    profile_query = {"email": email} if role == "student" else {"college_email": email}
+    profile_collection = db.students if role == "student" else db.advisors
+    profile_doc = await profile_collection.find_one(profile_query)
+    if not profile_doc:
+        raise HTTPException(status_code=404, detail="Account profile not found.")
 
-        user = await asyncio.to_thread(fb_auth.get_user_by_email, email)
-        await asyncio.to_thread(fb_auth.update_user, user.uid, password=payload.new_password)
-    except Exception as e:
-        raise HTTPException(
-            status_code=502,
-            detail="Could not update account password. Please try again.",
-        ) from e
-    finally:
-        # Invalidate OTP whether Firebase succeeds or fails (prevents reuse).
-        await db.password_reset_otps.delete_many(
-            {"email": email, "role": role},
+    # Backward-compatible migration: create auth_accounts row if legacy user doesn't have one yet.
+    auth_doc = await db.auth_accounts.find_one({"role": role, "email": email})
+    if not auth_doc:
+        uid = str(profile_doc.get("firebase_uid") or "") or uuid.uuid4().hex
+        await db.auth_accounts.insert_one(
+            {
+                "uid": uid,
+                "role": role,
+                "email": email,
+                "name": str(profile_doc.get("name") or email.split("@")[0]),
+                "password_hash": new_hash,
+                "created_at": now_dt,
+                "updated_at": now_dt,
+            }
+        )
+    else:
+        await db.auth_accounts.update_one(
+            {"_id": auth_doc["_id"]},
+            {"$set": {"password_hash": new_hash, "updated_at": now_dt}},
         )
 
+    upd = await profile_collection.update_one(
+        {"_id": profile_doc["_id"]},
+        {"$set": {"password_hash": new_hash, "updated_at": now_dt}},
+    )
+    if upd.matched_count == 0:
+        raise HTTPException(status_code=500, detail="Password updated, but profile sync failed.")
+
+    # Invalidate OTP only after a successful password change.
+    await db.password_reset_otps.delete_many(
+        {"email": email, "role": role},
+    )
+
     return {"ok": True}
+
+
+@router.post("/login")
+async def login_with_password(payload: LoginRequest) -> dict:
+    role = payload.role
+    email = payload.email.lower().strip()
+    db = get_database()
+    account = await db.auth_accounts.find_one({"role": role, "email": email})
+    if account:
+        if not verify_password(payload.password, str(account.get("password_hash") or "")):
+            raise HTTPException(status_code=401, detail="Invalid credentials.")
+    else:
+        # Backward-compatible fallback: allow login from profile password_hash and
+        # auto-create auth_accounts entry for JWT-native auth.
+        profile_collection = db.students if role == "student" else db.advisors
+        profile_query = {"email": email} if role == "student" else {"college_email": email}
+        profile = await profile_collection.find_one(profile_query)
+        if not profile:
+            raise HTTPException(status_code=401, detail="Invalid credentials.")
+        password_hash = str(profile.get("password_hash") or "")
+        if not password_hash or not verify_password(payload.password, password_hash):
+            raise HTTPException(status_code=401, detail="Invalid credentials.")
+        uid = str(profile.get("firebase_uid") or "") or uuid.uuid4().hex
+        now_dt = _now()
+        await db.auth_accounts.insert_one(
+            {
+                "uid": uid,
+                "role": role,
+                "email": email,
+                "name": str(profile.get("name") or email.split("@")[0]),
+                "password_hash": password_hash,
+                "created_at": now_dt,
+                "updated_at": now_dt,
+            }
+        )
+    return await _issue_login_token(role=role, email=email)
 
 
 # --- Sign-up OTP (Resend) → then Firebase user created with email_verified=True ---
@@ -171,14 +279,16 @@ class SignupOtpVerify(BaseModel):
     password: str = Field(min_length=6, max_length=128)
 
 
-async def _firebase_user_exists(email: str) -> bool:
-    from firebase_admin import auth as fb_auth
+class TokenExchangeRequest(BaseModel):
+    firebase_id_token: str | None = None
 
-    try:
-        await asyncio.to_thread(fb_auth.get_user_by_email, email)
-        return True
-    except fb_auth.UserNotFoundError:
-        return False
+
+@router.post("/token/exchange")
+async def exchange_firebase_for_jwt(
+    payload: TokenExchangeRequest,
+    authorization: str | None = Header(default=None),
+) -> dict:
+    raise HTTPException(status_code=410, detail="Firebase token exchange removed. Use /api/auth/login.")
 
 
 async def _mongo_profile_exists(role: str | None, email: str, allow_recovered: bool = False) -> bool:
@@ -229,8 +339,10 @@ async def request_signup_otp(payload: SignupOtpRequest) -> dict:
     if active:
         created_at = active.get("created_at")
         if isinstance(created_at, datetime):
-            if created_at.tzinfo is not None:
-                created_at = created_at.replace(tzinfo=None)
+            # Backward compatible: if older OTP docs stored naive datetimes,
+            # assume they were UTC.
+            if created_at.tzinfo is None:
+                created_at = created_at.replace(tzinfo=timezone.utc)
             if (now - created_at).total_seconds() < OTP_RESEND_COOLDOWN_SECONDS:
                 raise HTTPException(
                     status_code=429,
@@ -269,8 +381,6 @@ async def request_signup_otp(payload: SignupOtpRequest) -> dict:
 
 @router.post("/signup-otp/verify")
 async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
-    from firebase_admin import auth as fb_auth
-
     role = payload.role
     email = payload.email.lower().strip()
 
@@ -317,30 +427,42 @@ async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
         )
         raise HTTPException(status_code=400, detail="Invalid code.")
 
-    try:
-        await asyncio.to_thread(
-            fb_auth.create_user,
-            email=email,
-            password=payload.password,
-            email_verified=True,
+    existing = await db.auth_accounts.find_one({"role": role, "email": email})
+    now_dt = _now()
+    password_hash = hash_password(payload.password)
+    if existing:
+        await db.auth_accounts.update_one(
+            {"_id": existing["_id"]},
+            {"$set": {"password_hash": password_hash, "updated_at": now_dt}},
         )
-    except fb_auth.EmailAlreadyExistsError:
-        # User already in Firebase? That's fine if they are missing a MongoDB profile
-        # OR if they have a skeleton profile being 'claimed'.
-        # Since they verified OTP, we can safely update their password in case it was unknown/different.
-        await asyncio.to_thread(
-            fb_auth.update_user,
-            email=email,
-            password=payload.password
+        uid = str(existing.get("uid") or "")
+    else:
+        uid = uuid.uuid4().hex
+        await db.auth_accounts.insert_one(
+            {
+                "uid": uid,
+                "role": role,
+                "email": email,
+                "name": email.split("@")[0],
+                "password_hash": password_hash,
+                "created_at": now_dt,
+                "updated_at": now_dt,
+            }
         )
-        await db.signup_otps.delete_many({"email": email, "role": role})
-        return {"ok": True}
-    except Exception as e:
-        raise HTTPException(
-            status_code=502,
-            detail="Could not create your sign-in account. Try again in a moment.",
-        ) from e
 
     await db.signup_otps.delete_many({"email": email, "role": role})
-    return {"ok": True}
+    claims = _build_jwt_claims(uid=uid, email=email, role=role)
+    token, expires_in = create_access_token(claims=claims)
+    return {
+        "ok": True,
+        "access_token": token,
+        "token_type": "bearer",
+        "expires_in": expires_in,
+        "user": {
+            "uid": claims["uid"],
+            "email": claims["email"],
+            "role": role,
+            "name": claims["name"],
+        },
+    }
 

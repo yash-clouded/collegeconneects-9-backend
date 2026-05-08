@@ -7,7 +7,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.deps import firebase_claims
 from app.config import settings
 from app.database import close_db, connect_db, get_database
-from app.firebase_service import init_firebase_admin
 from app.routers import advisors, students, auth, bookings, upload, payments, predictor
 from app.s3_service import s3_configured
 from app.scheduler import start_scheduler, stop_scheduler
@@ -16,10 +15,6 @@ from app.scheduler import start_scheduler, stop_scheduler
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await connect_db()
-    try:
-        init_firebase_admin()
-    except Exception as e:
-        print(f"CRITICAL: Firebase Admin initialization failed: {e!s}")
     start_scheduler()
     yield
     stop_scheduler()
