@@ -102,7 +102,7 @@ async def _ensure_profile_exists(role: str, email: str) -> None:
 async def request_password_reset(payload: PasswordResetRequest) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_profile_exists(role, email)
+    await _ensure_firebase_user_exists_for_password_reset(email)
 
     db = get_database()
     now = _now()
@@ -158,7 +158,7 @@ async def request_password_reset(payload: PasswordResetRequest) -> dict:
 async def confirm_password_reset(payload: PasswordResetConfirm) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_profile_exists(role, email)
+    await _ensure_firebase_user_exists_for_password_reset(email)
 
     db = get_database()
     now = _now()
