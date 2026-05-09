@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 import hashlib
@@ -12,6 +12,8 @@ from app.database import get_database
 from app.jwt_service import create_access_token
 from app.mailer import send_password_reset_otp_email, send_signup_otp_email
 from app.security import hash_password, verify_password
+from firebase_admin import auth as firebase_auth
+from firebase_admin import auth as firebase_auth
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -190,6 +192,16 @@ async def confirm_password_reset(payload: PasswordResetConfirm) -> dict:
     profile_collection = db.students if role == "student" else db.advisors
     profile_doc = await profile_collection.find_one(profile_query)
     if not profile_doc:
+        # Try to detect if the email exists under the other role and give a clearer message.
+        other_collection = db.advisors if role == "student" else db.students
+        other_query = {"college_email": email} if role == "student" else {"email": email}
+        other_doc = await other_collection.find_one(other_query)
+        if other_doc:
+            other_role = "advisor" if role == "student" else "student"
+            raise HTTPException(
+                status_code=403,
+                detail=f"This email is registered as an {other_role}. Switch role and try again.",
+            )
         raise HTTPException(status_code=404, detail="Account profile not found.")
 
     # Backward-compatible migration: create auth_accounts row if legacy user doesn't have one yet.
@@ -264,7 +276,7 @@ async def login_with_password(payload: LoginRequest) -> dict:
     return await _issue_login_token(role=role, email=email)
 
 
-# --- Sign-up OTP (Resend) → then Firebase user created with email_verified=True ---
+# --- Sign-up OTP (Resend) â†’ then Firebase user created with email_verified=True ---
 
 
 class SignupOtpRequest(BaseModel):
@@ -466,3 +478,31 @@ async def verify_signup_otp(payload: SignupOtpVerify) -> dict:
         },
     }
 
+
+
+async def _ensure_firebase_user_exists_for_password_reset(email: str) -> None:
+    """
+    Ensure a Firebase Authentication user exists for the given email.
+    If Firebase Admin is not initialized (local dev), fall back to checking MongoDB profiles.
+    Raise HTTPException(404) if not found. Any unexpected errors become 500.
+    """
+    from firebase_admin import get_app
+    db = get_database()
+    try:
+        # If Firebase Admin is initialized, prefer checking there.
+        get_app()
+        firebase_auth.get_user_by_email(email)
+        return
+    except ValueError:
+        # Firebase not initialized—fall back to checking MongoDB profiles for local dev.
+        # Be flexible: check both common email fields and case-insensitively.
+        lower_email = email.lower()
+        student = await db.students.find_one({"$or": [{"email": lower_email}, {"college_email": lower_email}]})
+        advisor = await db.advisors.find_one({"$or": [{"college_email": lower_email}, {"email": lower_email}]})
+        if student or advisor:
+            return
+        raise HTTPException(status_code=404, detail="No user with that email")
+    except firebase_auth.UserNotFoundError:
+        raise HTTPException(status_code=404, detail="No user with that email")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

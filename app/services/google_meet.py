@@ -8,13 +8,25 @@ class GoogleMeetService:
     def __init__(self):
         self.scopes = ['https://www.googleapis.com/auth/calendar']
         self.creds = None
+        self.service = None
+
+    def init_from_settings(self):
         if settings.google_application_credentials:
-            self.creds = service_account.Credentials.from_service_account_file(
-                settings.google_application_credentials, scopes=self.scopes
-            )
-            if hasattr(settings, 'google_impersonate_user') and settings.google_impersonate_user:
-                self.creds = self.creds.with_subject(settings.google_impersonate_user)
-        self.service = build('calendar', 'v3', credentials=self.creds) if self.creds else None
+            try:
+                self.creds = service_account.Credentials.from_service_account_file(
+                    settings.google_application_credentials, scopes=self.scopes
+                )
+                if hasattr(settings, 'google_impersonate_user') and settings.google_impersonate_user:
+                    self.creds = self.creds.with_subject(settings.google_impersonate_user)
+                self.service = build('calendar', 'v3', credentials=self.creds)
+            except FileNotFoundError:
+                # Credentials file missing on local dev; service remains disabled
+                self.creds = None
+                self.service = None
+            except Exception:
+                # Any other error while initializing Google APIs should not crash import
+                self.creds = None
+                self.service = None
 
     def create_actual_meeting_link(self, summary: str, start_time: datetime.datetime, end_time: datetime.datetime):
         """
@@ -90,4 +102,16 @@ class GoogleMeetService:
         # Legacy method kept for fallback
         return self.create_actual_meeting_link(summary, start_time, end_time)
 
-google_meet_service = GoogleMeetService()
+# Lazy instance: don't attempt to read service account file at import time
+google_meet_service = None
+
+def get_google_meet_service() -> GoogleMeetService | None:
+    global google_meet_service
+    if google_meet_service is None:
+        try:
+            svc = GoogleMeetService()
+            svc.init_from_settings()
+            google_meet_service = svc
+        except Exception:
+            google_meet_service = None
+    return google_meet_service

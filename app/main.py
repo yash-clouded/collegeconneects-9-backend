@@ -1,10 +1,11 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.deps import firebase_claims
+from app.firebase_service import init_firebase_admin
 from app.config import settings
 from app.database import close_db, connect_db, get_database
 from app.routers import advisors, students, auth, bookings, upload, payments, predictor
@@ -14,6 +15,7 @@ from app.scheduler import start_scheduler, stop_scheduler
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    init_firebase_admin()
     await connect_db()
     start_scheduler()
     yield
@@ -83,3 +85,4 @@ async def root() -> dict[str, str]:
         "message": "CollegeConnect API",
         "collections": "MongoDB: students, advisors",
     }
+
