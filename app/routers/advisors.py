@@ -777,6 +777,26 @@ async def update_my_advisor(
     return await _add_advisor_stats(fresh, db)
 
 
+@router.delete("/me")
+async def delete_my_advisor(claims: dict = Depends(firebase_claims)) -> dict:
+    uid = claims["uid"]
+    db = get_database()
+    advisor = await db.advisors.find_one({"firebase_uid": uid})
+    if not advisor:
+        raise HTTPException(status_code=404, detail="Advisor profile not found")
+        
+    email = advisor.get("college_email", "").lower().strip()
+    
+    # 1. Delete advisor profile
+    await db.advisors.delete_one({"_id": advisor["_id"]})
+    
+    # 2. Delete from auth_accounts
+    if email:
+        await db.auth_accounts.delete_many({"email": email, "role": "advisor"})
+        
+    return {"ok": True, "message": "Account deleted permanently"}
+
+
 @router.get("/id/{advisor_id}")
 async def get_advisor(advisor_id: str) -> dict:
     if not ObjectId.is_valid(advisor_id):

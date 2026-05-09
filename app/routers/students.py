@@ -270,6 +270,26 @@ async def update_my_student(
     return fresh
 
 
+@router.delete("/me")
+async def delete_my_student(claims: dict = Depends(firebase_claims)) -> dict:
+    uid = claims["uid"]
+    db = get_database()
+    student = await db.students.find_one({"firebase_uid": uid})
+    if not student:
+        raise HTTPException(status_code=404, detail="Student profile not found")
+        
+    email = student.get("email", "").lower().strip()
+    
+    # 1. Delete student profile
+    await db.students.delete_one({"_id": student["_id"]})
+    
+    # 2. Delete from auth_accounts to completely free the email
+    if email:
+        await db.auth_accounts.delete_many({"email": email, "role": "student"})
+        
+    return {"ok": True, "message": "Account deleted permanently"}
+
+
 @router.get("/id/{student_id}")
 async def get_student(student_id: str) -> dict:
     if not ObjectId.is_valid(student_id):
