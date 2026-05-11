@@ -1,0 +1,291 @@
+ROUND,TYPE,Institute,Academic Program Name,Quota,Seat Type,Gender,Opening Rank,Closing Rank
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,58313,65917
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),53084,53648
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,10180,10180
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),16293,16293
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,33291,52241
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),52894,56151
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,8799,11090
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,15566,15566
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,29026,41817
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),41691,43186
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,6114,6634
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,12903,13478
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),16439,17214
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,3375,4841
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),8402,8402
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Bio Technology (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,2916,3006
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,28297,49650
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),46216,54809
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,7738,8740
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),9600,9600
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,24307,42794
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),37359,39672
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,7638,9501
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),7401,7401
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,SC (PwD),Gender-Neutral,126,126
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,24165,43332
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,21827,33644
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),39063,41891
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,1897,1897
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,4867,4972
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),6450,6450
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,9743,10647
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),16014,16580
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,4007,5276
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),7234,7234
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Chemical Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,2120,2306
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,34303,52004
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),54402,58821
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Gender-Neutral,2711,2711
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,7482,9381
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),9178,9178
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,32011,39530
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),43683,44470
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,7618,9466
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),11172,11172
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,17734,32136
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),16264,16264
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,25507,37500
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),42935,46913
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,1098,1098
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,5471,5521
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),7111,7111
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,10996,12040
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),18176,18509
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,4775,5637
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),1933,1933
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,670,1255
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Civil Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),3134,3134
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,6821,14502
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),11180,18113
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Female-only (including Supernumerary),686,686
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,1952,2912
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),2865,3397
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,3960,7779
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),4979,10562
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,967,3299
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),3449,3812
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,776,3754
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),9914,9914
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,1818,10073
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),13426,18149
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,241,241
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,1341,1463
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),2555,2555
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,2600,3642
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),4915,6862
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Female-only (including Supernumerary),364,364
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,971,1916
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),2514,3707
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,SC (PwD),Gender-Neutral,104,104
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,513,877
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),1357,1357
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Computer Science and Engineering (4 Years, Bachelor of Technology)",OS,ST (PwD),Gender-Neutral,32,32
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,14668,18820
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),18504,18504
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Female-only (including Supernumerary),1808,1808
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,3024,3300
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),4736,4736
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,8634,16759
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),23221,23221
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,4733,5878
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),6475,6475
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,5260,5260
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),13468,13468
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,12086,13847
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),18693,19393
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,411,411
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,1811,1823
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),3846,3846
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,4285,5002
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),8853,8853
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,2243,2349
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),4664,4664
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1047,1244
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Data Science and Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),1871,1871
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,24679,28694
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),26666,26765
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Gender-Neutral,3230,3230
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,4241,4630
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),7211,7211
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,7876,24214
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),30017,30017
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,6757,6943
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),7357,7357
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,3945,9740
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,15106,18324
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),26952,28221
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,1102,1102
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,2621,2627
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),4281,4281
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,5877,6442
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),12149,12149
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,3303,3700
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),6535,6535
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1292,1366
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electrical Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),2562,2562
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,17414,24521
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),19009,21429
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Female-only (including Supernumerary),1878,1878
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,3574,3670
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),6717,6717
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,9081,20131
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),22397,24627
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,3643,6068
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),6554,6554
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,7148,7679
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),10440,10440
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,13172,14476
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),21431,21777
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,668,668
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,1894,1928
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),3766,3766
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,4728,5213
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),8936,8974
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Gender-Neutral,373,373
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,2737,3028
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),4564,4564
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1173,1245
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and Communication Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),2469,2469
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,24789,26658
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),25280,25280
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,4179,4179
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,20926,23520
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),25671,25671
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,849,849
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),3296,3296
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,11575,11575
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,14546,15467
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),24930,24930
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,2208,2263
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,5165,5511
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),10837,10837
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,3406,3406
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),5917,5917
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Electronics and VLSI Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1445,1445
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,36643,56804
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),51164,62629
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,9243,10218
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),10416,10416
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,44379,49771
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),63114,70716
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,10070,11045
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),14334,14334
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,19975,37762
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),51413,51556
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,6242,6283
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),7685,7685
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,11331,13259
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),18446,18859
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,4613,6430
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),9441,9441
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,2569,2913
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Industrial and Production Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),3799,3799
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,15163,21752
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),19075,23461
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Gender-Neutral,821,821
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,3395,3874
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,7892,14397
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),11219,17441
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,3516,5639
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),4350,4550
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,3795,8761
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,10088,13050
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),18222,20820
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,505,505
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,1752,1842
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),3671,3671
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,3759,4787
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),7634,8458
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Female-only (including Supernumerary),816,816
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,2140,2672
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),3741,4398
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1142,1170
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),2434,2434
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Information Technology (4 Years, Bachelor of Technology)",OS,ST (PwD),Gender-Neutral,33,33
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,28502,38495
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),36779,47330
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,6560,6872
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),7706,7706
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,25114,34615
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),45649,60462
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,6249,9573
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),7831,7831
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,22132,22132
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),15588,15588
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,18375,26079
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),33040,38413
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,1050,1050
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,3729,3806
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),6625,6625
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,EWS (PwD),Gender-Neutral,310,310
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,7020,8201
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),15521,15521
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Female-only (including Supernumerary),1367,1367
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,4527,5045
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),7472,7472
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,2336,2446
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Instrumentation and Control Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),3189,3189
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,12228,19925
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),17921,24158
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,OPEN (PwD),Gender-Neutral,1368,1368
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,3458,4142
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),5547,5547
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,12994,18525
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),23380,23380
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,3935,5698
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),1390,1390
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,14260,20545
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,10431,13285
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),20823,21041
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,828,828
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Female-only (including Supernumerary),1300,1300
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,1906,1941
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,4010,4838
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),9610,9610
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,2137,2660
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),4366,4366
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mathematics and Computing (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1349,1401
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,29862,42155
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),35572,48452
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,5929,7506
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),9003,9003
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,25447,33874
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),30929,52625
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,7886,8542
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),12817,13786
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,ST,Gender-Neutral,10439,15704
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",HS,ST,Female-only (including Supernumerary),22446,22446
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,16808,27699
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),29540,40391
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OPEN (PwD),Gender-Neutral,1217,1217
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,3877,4200
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),5841,5841
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,EWS (PwD),Gender-Neutral,202,202
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,8453,9299
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),16976,17040
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Female-only (including Supernumerary),1264,1264
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,3082,5037
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),7117,7231
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,1935,2025
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Mechanical Engineering (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),3375,3375
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,OPEN,Gender-Neutral,61273,70398
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,OPEN,Female-only (including Supernumerary),65722,70817
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,EWS,Gender-Neutral,10250,11143
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,EWS,Female-only (including Supernumerary),12630,12630
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Gender-Neutral,44934,51292
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,OBC-NCL,Female-only (including Supernumerary),41751,72072
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,SC,Gender-Neutral,10631,14690
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",HS,SC,Female-only (including Supernumerary),14394,14394
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,OPEN,Gender-Neutral,35157,44936
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,OPEN,Female-only (including Supernumerary),46242,54359
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,EWS,Gender-Neutral,6334,6374
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,EWS,Female-only (including Supernumerary),8078,8078
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Gender-Neutral,13353,14878
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL,Female-only (including Supernumerary),19226,19226
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,OBC-NCL (PwD),Gender-Neutral,843,843
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,SC,Gender-Neutral,6801,7036
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,SC,Female-only (including Supernumerary),9019,9019
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,ST,Gender-Neutral,2989,3045
+1,NIT,"Dr. B R Ambedkar National Institute of Technology, Jalandhar","Textile Technology (4 Years, Bachelor of Technology)",OS,ST,Female-only (including Supernumerary),3459,3459
