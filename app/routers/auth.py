@@ -104,7 +104,7 @@ async def _ensure_profile_exists(role: str, email: str) -> None:
 async def request_password_reset(payload: PasswordResetRequest) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_firebase_user_exists_for_password_reset(email)
+    await _ensure_profile_exists(role, email)
 
     db = get_database()
     now = _now()
@@ -129,6 +129,11 @@ async def request_password_reset(payload: PasswordResetRequest) -> dict:
     salt = secrets.token_hex(16)
     otp_hash = _hash_otp(otp=otp, salt=salt)
     expires_at = now + timedelta(minutes=OTP_TTL_MINUTES)
+    
+    # Invalidate any old OTPs immediately so the LATEST one is the only one that works.
+    # This prevents the race condition where a user receives an older email but the backend
+    # expects the newest OTP hash.
+    await db.password_reset_otps.delete_many({"email": email, "role": role})
 
     res = await db.password_reset_otps.insert_one(
         {
@@ -160,7 +165,7 @@ async def request_password_reset(payload: PasswordResetRequest) -> dict:
 async def confirm_password_reset(payload: PasswordResetConfirm) -> dict:
     role = payload.role
     email = payload.email.lower().strip()
-    await _ensure_firebase_user_exists_for_password_reset(email)
+    await _ensure_profile_exists(role, email)
 
     db = get_database()
     now = _now()
@@ -365,6 +370,9 @@ async def request_signup_otp(payload: SignupOtpRequest) -> dict:
     salt = secrets.token_hex(16)
     otp_hash = _hash_otp(otp=otp, salt=salt)
     expires_at = now + timedelta(minutes=OTP_TTL_MINUTES)
+
+    # Invalidate any old OTPs for this email/role so only the latest one works.
+    await db.signup_otps.delete_many({"email": email, "role": role})
 
     res = await db.signup_otps.insert_one(
         {
